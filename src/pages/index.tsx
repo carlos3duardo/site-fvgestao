@@ -1,6 +1,10 @@
 import { Box, chakra, Flex } from '@chakra-ui/react';
 import Head from 'next/head';
-import { QuemSomos, WelcomeBanner } from '../components/Home';
+import {
+  DesenvolvimentoEmpresarial,
+  QuemSomos,
+  WelcomeBanner,
+} from '../components/Home';
 import { Header } from '../components/Layout';
 import ViewBreakpoint from '../components/Layout/ViewBreakpoint';
 
@@ -16,6 +20,7 @@ export default function Home(): JSX.Element {
         <Box flex="1">
           <WelcomeBanner />
           <QuemSomos />
+          <DesenvolvimentoEmpresarial />
         </Box>
 
         <chakra.footer bgColor="red.100">footer</chakra.footer>

@@ -23,7 +23,7 @@ export default function QuemSomos(): JSX.Element {
         >
           <chakra.figure
             width={{ base: '100%', lg: '520px', xl: '640px' }}
-            height={{ base: '357px', md: '420px' }}
+            height={{ base: '260px', md: '420px' }}
             margin={{ base: '0 0 2rem 0', lg: '0 2rem 0 0' }}
             padding="1rem"
             backgroundImage="img/home-quem-somos-video-background.jpg"
