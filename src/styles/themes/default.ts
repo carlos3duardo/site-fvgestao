@@ -11,15 +11,17 @@ const theme = {
     },
   },
   fonts: {
-    body: 'Ubuntu, Helvetica, Arial, sans-serif',
-    heading: 'Ubuntu, Helvetica, Arial, sans-serif',
+    body: 'adineue PRO, Ubuntu, Helvetica, Arial, sans-serif',
+    heading: 'adineue PRO, Ubuntu, Helvetica, Arial, sans-serif',
     mono: 'monospace',
   },
   fontWeights: {
+    light: 300,
     normal: 400,
     regular: 400,
-    semibold: 500,
+    semibold: 700,
     bold: 700,
+    black: 900,
   },
   colors: {
     background: {
