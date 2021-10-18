@@ -6,13 +6,13 @@ import { Container } from '../../Layout';
 export default function DesenvolvimentoEmpresarial(): JSX.Element {
   return (
     <Box
-      padding="4rem 0"
+      padding={{ base: '0', md: '4rem 0' }}
       backgroundImage="url(/img/home-desenvolvimento-empresarial-background.jpg)"
       backgroundRepeat="no-repeat"
       backgroundPosition="center center"
       backgroundSize="cover"
     >
-      <Container padding={{ base: '0 2rem', xl: '0' }}>
+      <Container padding={{ base: '0', md: '0 2rem', xl: '0' }}>
         <Box
           padding="3rem"
           width={{ base: '100%', lg: '540px' }}
@@ -24,7 +24,7 @@ export default function DesenvolvimentoEmpresarial(): JSX.Element {
             top: 0,
             left: 0,
             backgroundColor: 'background.light',
-            borderRadius: '0.75rem',
+            borderRadius: { base: '0', md: '0.75rem' },
             width: '100%',
             height: '100%',
             opacity: '0.9',
@@ -33,7 +33,7 @@ export default function DesenvolvimentoEmpresarial(): JSX.Element {
         >
           <Heading
             as="h2"
-            fontSize="2.5rem"
+            fontSize={{ base: '1.75rem', md: '2.5rem' }}
             color="orange.500"
             marginBottom="1rem"
             position="relative"

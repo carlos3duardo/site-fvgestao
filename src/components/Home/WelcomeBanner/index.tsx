@@ -26,12 +26,18 @@ export default function WelcomeBanner(): JSX.Element {
         <Container position="relative" height="520px">
           <chakra.img
             src="/img/fvgestao-logo-icone.svg"
-            width={{ base: '520px' }}
-            height={{ base: '520px' }}
+            width={{ base: '520px', xl: '420px', '2xl': '520px' }}
+            height={{ base: '520px', xl: '420px', '2xl': '520px' }}
             position="absolute"
             top="50%"
-            right={{ base: '-220px', md: '-160px', lg: '-160px' }}
-            marginTop={{ base: '-260px' }}
+            right={{
+              base: '-220px',
+              md: '-160px',
+              lg: '-160px',
+              xl: '0',
+              '2xl': '-160px',
+            }}
+            marginTop={{ base: '-260px', xl: '-210px', '2xl': '-260px' }}
             opacity="0.3"
             zIndex="0"
           />
