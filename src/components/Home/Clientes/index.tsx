@@ -76,7 +76,7 @@ export default function Clientes(): JSX.Element {
                 justifyContent="center"
               >
                 <Image
-                  src="/img/cliente-dentalgold.png"
+                  src="/img/clientes/cliente-dentalgold.png"
                   alt="Dental Gold"
                   layout="fill"
                   objectFit="scale-down"
@@ -92,7 +92,7 @@ export default function Clientes(): JSX.Element {
                 justifyContent="center"
               >
                 <Image
-                  src="/img/cliente-ppq.png"
+                  src="/img/clientes/cliente-ppq.png"
                   alt="Programa Paraibano da Qualidade"
                   layout="fill"
                   objectFit="scale-down"
@@ -108,7 +108,7 @@ export default function Clientes(): JSX.Element {
                 justifyContent="center"
               >
                 <Image
-                  src="/img/cliente-rommanel.png"
+                  src="/img/clientes/cliente-rommanel.png"
                   alt="Rommanel"
                   layout="fill"
                   objectFit="scale-down"
@@ -124,7 +124,7 @@ export default function Clientes(): JSX.Element {
                 justifyContent="center"
               >
                 <Image
-                  src="/img/cliente-engeselt.png"
+                  src="/img/clientes/cliente-engeselt.png"
                   alt="Engeselt"
                   layout="fill"
                   objectFit="scale-down"
@@ -140,7 +140,7 @@ export default function Clientes(): JSX.Element {
                 justifyContent="center"
               >
                 <Image
-                  src="/img/cliente-afrafep.png"
+                  src="/img/clientes/cliente-afrafep.png"
                   alt="Afrafep"
                   layout="fill"
                   objectFit="scale-down"
@@ -156,7 +156,7 @@ export default function Clientes(): JSX.Element {
                 justifyContent="center"
               >
                 <Image
-                  src="/img/cliente-energisa-ro.png"
+                  src="/img/clientes/cliente-energisa-ro.png"
                   alt="Energisa Rondônia"
                   layout="fill"
                   objectFit="scale-down"
