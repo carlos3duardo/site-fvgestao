@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import { Box, chakra, Heading } from '@chakra-ui/react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Pagination, Navigation, Autoplay } from 'swiper/core';
+import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
 
 import { Container } from '../../Layout';
 
-import 'swiper/swiper-bundle.css';
+import 'swiper/css/bundle';
 
 import styles from './styles.module.scss';
 
