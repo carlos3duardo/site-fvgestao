@@ -30,6 +30,9 @@ const theme = {
       lighter: '#395571',
       gray: '#e5e5e5',
     },
+    gradient: {
+      primary: 'linear-gradient(90deg, #F83600 0%, #FE8C00 100%)',
+    },
     primary: {
       50: '#DFE7EF',
       100: '#BECEDE',

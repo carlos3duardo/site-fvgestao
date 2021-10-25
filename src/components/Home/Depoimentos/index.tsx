@@ -87,7 +87,7 @@ function Depoimento({ nome, imagem, cargo, nota, texto }: DepoimentoProps) {
 
 export default function Depoimentos(): JSX.Element {
   return (
-    <Box padding="60px 0" backgroundColor="background.light" color="gray.200">
+    <Box padding="80px 0" backgroundColor="background.light" color="gray.200">
       <Container
         backgroundImage="url(/img/home-depoimentos-aspas.png)"
         backgroundRepeat="no-repeat"
