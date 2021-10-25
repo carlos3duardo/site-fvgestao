@@ -22,8 +22,6 @@ const InputBase: ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
   return (
     <>
       <FormControl
-        borderWidth="1px"
-        borderStyle="solid"
         bgColor="#e5e5e5"
         borderRadius="99px"
         padding=".75rem 1.5rem"

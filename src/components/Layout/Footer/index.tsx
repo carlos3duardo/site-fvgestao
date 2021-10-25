@@ -15,7 +15,7 @@ export default function Footer(): JSX.Element {
           textAlign="center"
           fontSize={{ base: '1.75rem', md: '2.5rem' }}
         >
-          Contato / Rodapé
+          Rodapé
         </Heading>
       </Container>
     </chakra.footer>
