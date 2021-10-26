@@ -15,9 +15,9 @@ export default function Plataformas(): JSX.Element {
         >
           PLATAFORMAS
         </Heading>
-        <VStack spacing="4rem">
+        <VStack>
           <Flex direction={{ base: 'column', md: 'row' }} alignItems="center">
-            <chakra.figure w="300px">
+            <chakra.figure w="300px" textAlign="center">
               <Image
                 src="/img/app-otimizze.png"
                 alt="Otimizze"
@@ -25,17 +25,22 @@ export default function Plataformas(): JSX.Element {
                 height={160}
               />
             </chakra.figure>
-            <Text fontSize="1.5rem" flex="1">
+            <Text
+              fontSize="1.5rem"
+              flex="1"
+              textAlign={{ base: 'center', md: 'left' }}
+            >
               Aqui você identifica o grau de profissionalismo gerencial do seu
               negócio através de planos operacionais, criando musculatura para
               solidificar o seu negócio.
             </Text>
           </Flex>
+          <Image src="/img/app-dots.svg" alt="" width={724} height={156} />
           <Flex
             direction={{ base: 'column', md: 'row-reverse' }}
             alignItems="center"
           >
-            <chakra.figure w="300px">
+            <chakra.figure w="300px" textAlign="center">
               <Image
                 src="/img/app-otimizze.png"
                 alt="Otimizze"
@@ -43,13 +48,23 @@ export default function Plataformas(): JSX.Element {
                 height={160}
               />
             </chakra.figure>
-            <Text fontSize="1.5rem" flex="1" textAlign="right">
+            <Text
+              fontSize="1.5rem"
+              flex="1"
+              textAlign={{ base: 'center', md: 'right' }}
+            >
               Capacite os seus colaboradores para o desempenho total de suas
               capacidades técnicas vocacionais, competências e saberes.
             </Text>
           </Flex>
+          <Image
+            src="/img/app-dots-reverse.svg"
+            alt=""
+            width={724}
+            height={156}
+          />
           <Flex direction={{ base: 'column', md: 'row' }} alignItems="center">
-            <chakra.figure w="300px">
+            <chakra.figure w="300px" textAlign="center" position="relative">
               <Image
                 src="/img/app-otimizze.png"
                 alt="Otimizze"
@@ -57,16 +72,21 @@ export default function Plataformas(): JSX.Element {
                 height={160}
               />
             </chakra.figure>
-            <Text fontSize="1.5rem" flex="1">
+            <Text
+              fontSize="1.5rem"
+              flex="1"
+              textAlign={{ base: 'center', md: 'left' }}
+            >
               Um centro de excelência impulsionando a cultura de um aprendizado
               dirigido ao desenvolvimento e crescimento sustentável da empresa.
             </Text>
           </Flex>
+          <Image src="/img/app-dots.svg" alt="" width={724} height={156} />
           <Flex
             direction={{ base: 'column', md: 'row-reverse' }}
             alignItems="center"
           >
-            <chakra.figure w="300px">
+            <chakra.figure w="300px" textAlign="center" position="relative">
               <Image
                 src="/img/app-otimizze.png"
                 alt="Otimizze"
@@ -74,7 +94,11 @@ export default function Plataformas(): JSX.Element {
                 height={160}
               />
             </chakra.figure>
-            <Text fontSize="1.5rem" flex="1" textAlign="right">
+            <Text
+              fontSize="1.5rem"
+              flex="1"
+              textAlign={{ base: 'center', md: 'right' }}
+            >
               Acompanhamento o grau de satisfação e fidelidade dos clientes,
               objetivando o sucesso na relação de serviços e produtos ofertados.
             </Text>
