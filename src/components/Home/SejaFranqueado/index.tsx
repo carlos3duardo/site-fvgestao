@@ -3,8 +3,40 @@ import Link from 'next/link';
 
 export default function SejaFranqueado(): JSX.Element {
   return (
-    <Flex direction="row" bgColor="background.dark" color="gray.200">
-      <Flex flex="1" direction="row" justifyContent="flex-end" padding="80px 0">
+    <Flex
+      direction="row"
+      position="relative"
+      overflow="hidden"
+      color="gray.200"
+    >
+      <chakra.div
+        position="absolute"
+        bottom="0"
+        right="50%"
+        width="100%"
+        height="100%"
+        background="background.dark"
+        // transform="matrix(0.97, 0, -0.27, 1, 0, 0)"
+        zIndex="0"
+        _after={{
+          content: '""',
+          position: 'absolute',
+          bottom: '0',
+          left: '100%',
+          width: '400px',
+          height: '100vh',
+          borderWidth: '100vh 400px 0 0',
+          borderColor: 'transparent',
+          borderTopColor: `background.dark`,
+        }}
+      />
+      <Flex
+        flex="1"
+        justifyContent="flex-end"
+        padding="120px 0"
+        position="relative"
+        zIndex="1"
+      >
         <chakra.div
           width={{ base: '100%', xl: '640px' }}
           padding={{ base: '1rem', xl: '0 2rem' }}
@@ -41,21 +73,6 @@ export default function SejaFranqueado(): JSX.Element {
         backgroundRepeat="no-repeat"
         backgroundPosition="center center"
         backgroundSize="cover"
-        position="relative"
-        overflow="hidden"
-        _before={{
-          content: '""',
-          position: 'absolute',
-          bottom: '0',
-          left: '0',
-          height: '100%',
-          width: '160px',
-          borderWidth: '0 0 100vh 300px',
-          borderStyle: 'solid',
-          borderColor: 'transparent',
-          borderLeftColor: 'background.dark',
-          zIndex: 1,
-        }}
       />
     </Flex>
   );

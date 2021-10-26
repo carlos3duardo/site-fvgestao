@@ -32,14 +32,25 @@ export default function Contato(): JSX.Element {
           <chakra.div
             position="absolute"
             top="0"
-            left="40%"
+            left="50%"
             width="100%"
             height="100%"
-            background="linear-gradient(90deg, rgba(254, 140, 0, 0.8) 27.58%, rgba(248, 104, 0, 0.8) 92.9%)"
-            transform="matrix(0.97, 0, -0.27, 1, 0, 0)"
+            backgroundColor="orange.600"
+            opacity="0.8"
             zIndex="0"
+            _after={{
+              content: '""',
+              position: 'absolute',
+              top: '0',
+              right: '100%',
+              width: '400px',
+              height: '100vh',
+              borderWidth: '0 0 100vh 400px',
+              borderColor: 'transparent',
+              borderBottomColor: `orange.600`,
+            }}
           />
-          <Box width="50%" position="relative" zIndex="1">
+          <Box width="50%" position="relative" zIndex="1" padding="0 0 0 2rem">
             <Heading
               as="h2"
               color="background.dark"
