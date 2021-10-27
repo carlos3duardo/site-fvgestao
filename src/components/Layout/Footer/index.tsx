@@ -20,12 +20,16 @@ export default function Footer(): JSX.Element {
     >
       <Container>
         <Flex
-          direction="row"
+          direction={{ base: 'column', md: 'row' }}
           justifyContent="space-between"
           alignItems="center"
         >
           <chakra.div>
-            <HStack spacing="1rem">
+            <HStack
+              spacing="1rem"
+              justifyContent={{ base: 'space-around', md: 'flex-start' }}
+              margin={{ base: '0 0 3rem 0', md: '0' }}
+            >
               <chakra.a
                 href="https://www.facebook.com/fvgestao"
                 target="_blank"
@@ -74,7 +78,7 @@ export default function Footer(): JSX.Element {
               </Text>
             </Flex>
           </chakra.div>
-          <chakra.div>
+          <chakra.div margin={{ base: '2rem 0 0 0', md: '0' }}>
             <Flex mt="1rem" alignItems="center">
               <chakra.figure>
                 <Icon as={FaEnvelope} w={8} h={8} color="orange.500" />
@@ -93,11 +97,13 @@ export default function Footer(): JSX.Element {
       >
         <Container>
           <Flex
-            direction="row"
+            direction={{ base: 'column', md: 'row' }}
             justifyContent="space-between"
             alignItems="center"
           >
-            <Text>2021 &copy; FV Gestão. Todos os direitos reservados.</Text>
+            <Text marginBottom={{ base: '1rem', md: '0' }}>
+              2021 &copy; FV Gestão. Todos os direitos reservados.
+            </Text>
             <chakra.figure>
               <Image
                 src="/img/fvgestao-logo-footer.svg"
