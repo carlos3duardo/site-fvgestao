@@ -3,10 +3,40 @@ import { Box, Flex, Heading, Text, VStack, chakra } from '@chakra-ui/react';
 
 import { Container } from '../../Layout';
 
+interface LineDotsProps {
+  reverse?: boolean;
+}
+
+function Dots({ reverse = false }: LineDotsProps): JSX.Element {
+  return (
+    <chakra.figure
+      display={{ base: 'none', md: 'block' }}
+      width={{ base: '100%', md: '440px', lg: '664px', xl: '724px' }}
+      height={{ base: '120px', md: '124px', lg: '155px', xl: '156px' }}
+      backgroundImage={{
+        base: 'none',
+        md: reverse
+          ? 'url(/img/app-dots-md-reverse.svg)'
+          : 'url(/img/app-dots-md.svg)',
+        lg: reverse
+          ? 'url(/img/app-dots-lg-reverse.svg)'
+          : 'url(/img/app-dots-lg.svg)',
+        xl: reverse
+          ? 'url(/img/app-dots-xl-reverse.svg)'
+          : 'url(/img/app-dots-xl.svg)',
+      }}
+      backgroundSize="cover"
+    />
+  );
+}
+
 export default function Plataformas(): JSX.Element {
   return (
     <Box padding="4rem 0" color="primary.500">
-      <Container maxWidth="container.lg">
+      <Container
+        width="100%"
+        maxWidth={{ base: '100%', md: '48em', lg: '62em', xl: `container.lg` }}
+      >
         <Heading
           as="h2"
           textAlign="center"
@@ -35,7 +65,9 @@ export default function Plataformas(): JSX.Element {
               solidificar o seu negócio.
             </Text>
           </Flex>
-          <Image src="/img/app-dots.svg" alt="" width={724} height={156} />
+
+          <Dots />
+
           <Flex
             direction={{ base: 'column', md: 'row-reverse' }}
             alignItems="center"
@@ -57,12 +89,9 @@ export default function Plataformas(): JSX.Element {
               capacidades técnicas vocacionais, competências e saberes.
             </Text>
           </Flex>
-          <Image
-            src="/img/app-dots-reverse.svg"
-            alt=""
-            width={724}
-            height={156}
-          />
+
+          <Dots reverse />
+
           <Flex direction={{ base: 'column', md: 'row' }} alignItems="center">
             <chakra.figure w="300px" textAlign="center" position="relative">
               <Image
@@ -81,7 +110,9 @@ export default function Plataformas(): JSX.Element {
               dirigido ao desenvolvimento e crescimento sustentável da empresa.
             </Text>
           </Flex>
-          <Image src="/img/app-dots.svg" alt="" width={724} height={156} />
+
+          <Dots />
+
           <Flex
             direction={{ base: 'column', md: 'row-reverse' }}
             alignItems="center"

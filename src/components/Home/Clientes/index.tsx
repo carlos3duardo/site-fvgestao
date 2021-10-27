@@ -19,12 +19,19 @@ export default function Clientes(): JSX.Element {
       position="relative"
       _before={{
         content: '""',
-        width: '800px',
+        width: {
+          base: '80%',
+          xl: '600px',
+        },
+        maxWidth: '800px',
         height: '2px',
         position: 'absolute',
         top: '0',
         left: '50%',
-        marginLeft: '-400px',
+        marginLeft: {
+          base: '-40%',
+          xl: '-300px',
+        },
         backgroundColor: 'primary.500',
       }}
     >

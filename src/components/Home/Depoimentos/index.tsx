@@ -164,56 +164,62 @@ export default function Depoimentos(): JSX.Element {
             >
               <SwiperSlide className={styles.swiperSlide}>
                 <Depoimento
-                  nome="Paranoid Android"
-                  cargo="Seu cargo"
+                  nome="William Wallace"
+                  cargo="Gerente de Qualidade"
                   nota={9}
                   texto="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu odio ut sem nulla pharetra diam sit amet nisl."
-                  imagem="https://i.pravatar.cc/160"
+                  imagem={`https://i.pravatar.cc/160?u=${Math.random()
+                    .toString(36)
+                    .replace(/[^a-z]+/g, '')
+                    .substr(2, 10)}`}
                 />
               </SwiperSlide>
               <SwiperSlide className={styles.swiperSlide}>
                 <Depoimento
-                  nome="Carlos Eduardo"
-                  cargo="Seu cargo"
-                  nota={8}
-                  texto="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu odio ut sem nulla pharetra diam sit amet nisl."
-                  imagem="https://i.pravatar.cc/160"
-                />
-              </SwiperSlide>
-              <SwiperSlide className={styles.swiperSlide}>
-                <Depoimento
-                  nome="Tony Stark"
-                  cargo="Seu cargo"
+                  nome="Tyler Durden"
+                  cargo="Gerente de RH"
                   nota={10}
                   texto="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu odio ut sem nulla pharetra diam sit amet nisl."
-                  imagem="https://i.pravatar.cc/160"
+                  imagem={`https://i.pravatar.cc/160?u=${Math.random()
+                    .toString(36)
+                    .replace(/[^a-z]+/g, '')
+                    .substr(2, 10)}`}
                 />
               </SwiperSlide>
               <SwiperSlide className={styles.swiperSlide}>
                 <Depoimento
                   nome="Caio Júlio César"
-                  cargo="Seu cargo"
+                  cargo="Gestor de Processos"
                   nota={8}
                   texto="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu odio ut sem nulla pharetra diam sit amet nisl."
-                  imagem="https://i.pravatar.cc/160"
+                  imagem={`https://i.pravatar.cc/160?u=${Math.random()
+                    .toString(36)
+                    .replace(/[^a-z]+/g, '')
+                    .substr(2, 10)}`}
                 />
               </SwiperSlide>
               <SwiperSlide className={styles.swiperSlide}>
                 <Depoimento
                   nome="Will Leite"
-                  cargo="Seu cargo"
+                  cargo="Gerente de RH"
                   nota={8}
                   texto="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu odio ut sem nulla pharetra diam sit amet nisl."
-                  imagem="https://i.pravatar.cc/160"
+                  imagem={`https://i.pravatar.cc/160?u=${Math.random()
+                    .toString(36)
+                    .replace(/[^a-z]+/g, '')
+                    .substr(2, 10)}`}
                 />
               </SwiperSlide>
               <SwiperSlide className={styles.swiperSlide}>
                 <Depoimento
                   nome="Fábio Coala"
-                  cargo="Seu cargo"
+                  cargo="Diretor Executivo"
                   nota={10}
                   texto="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu odio ut sem nulla pharetra diam sit amet nisl."
-                  imagem="https://i.pravatar.cc/160"
+                  imagem={`https://i.pravatar.cc/160?u=${Math.random()
+                    .toString(36)
+                    .replace(/[^a-z]+/g, '')
+                    .substr(2, 10)}`}
                 />
               </SwiperSlide>
             </Swiper>
