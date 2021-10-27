@@ -64,7 +64,7 @@ function Plataforma({
 
 export default function Plataformas(): JSX.Element {
   return (
-    <Box padding="4rem 0" color="primary.500">
+    <Box padding="4rem 0" color="primary.500" backgroundColor="gray.100">
       <Container
         width="100%"
         maxWidth={{ base: '100%', md: '48em', lg: '62em', xl: `container.lg` }}

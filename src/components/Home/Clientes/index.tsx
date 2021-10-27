@@ -15,6 +15,7 @@ SwiperCore.use([Pagination, Navigation, Autoplay]);
 export default function Clientes(): JSX.Element {
   return (
     <Box
+      backgroundColor="gray.100"
       padding="60px 0"
       color="primary.800"
       position="relative"
@@ -54,21 +55,21 @@ export default function Clientes(): JSX.Element {
             pagination={{ clickable: true }}
             loop
             autoplay={{ delay: 4000 }}
-            slidesPerView={5}
+            // slidesPerView={5}
             spaceBetween={30}
             breakpoints={{
               // when window width is >= 480px
-              480: {
+              '480': {
                 slidesPerView: 2,
                 spaceBetween: 20,
               },
               // when window width is >= 640px
-              640: {
+              '640': {
                 slidesPerView: 3,
                 spaceBetween: 20,
               },
               // when window width is >= 920px
-              1024: {
+              '1024': {
                 slidesPerView: 5,
                 spaceBetween: 30,
               },
