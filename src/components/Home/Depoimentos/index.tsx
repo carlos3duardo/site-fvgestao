@@ -60,8 +60,9 @@ function Depoimento({ nome, imagem, cargo, nota, texto }: DepoimentoProps) {
           marginTop={{ base: '-70px', md: '-70px' }}
           left={{ base: '50%', md: '-70px' }}
           marginLeft={{ base: '-70px', md: '0' }}
+          backgroundColor="orange.500"
         >
-          <Image src={imagem} width={140} height={140} />
+          <Image src={imagem} width={144} height={144} />
         </chakra.figure>
         <Heading as="h3" fontSize="1.75rem" color="orange.500">
           {nome}
@@ -181,62 +182,61 @@ export default function Depoimentos(): JSX.Element {
             >
               <SwiperSlide className={styles.swiperDepoimento}>
                 <Depoimento
-                  nome="William Wallace"
-                  cargo="Gerente de Qualidade"
-                  nota={9}
-                  texto="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu odio ut sem nulla pharetra diam sit amet nisl."
-                  imagem={`https://i.pravatar.cc/160?u=${Math.random()
-                    .toString(36)
-                    .replace(/[^a-z]+/g, '')
-                    .substr(2, 10)}`}
-                />
-              </SwiperSlide>
-              <SwiperSlide className={styles.swiperDepoimento}>
-                <Depoimento
-                  nome="Tyler Durden"
-                  cargo="Gerente de RH"
-                  nota={10}
-                  texto="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu odio ut sem nulla pharetra diam sit amet nisl."
-                  imagem={`https://i.pravatar.cc/160?u=${Math.random()
-                    .toString(36)
-                    .replace(/[^a-z]+/g, '')
-                    .substr(2, 10)}`}
-                />
-              </SwiperSlide>
-              <SwiperSlide className={styles.swiperDepoimento}>
-                <Depoimento
-                  nome="Caio Júlio César"
+                  nome="Felipe Aquino"
                   cargo="Gestor de Processos"
                   nota={8}
                   texto="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu odio ut sem nulla pharetra diam sit amet nisl."
-                  imagem={`https://i.pravatar.cc/160?u=${Math.random()
-                    .toString(36)
-                    .replace(/[^a-z]+/g, '')
-                    .substr(2, 10)}`}
+                  imagem="/img/depoimento-avatar-felipe-aquino.jpg"
                 />
               </SwiperSlide>
+
               <SwiperSlide className={styles.swiperDepoimento}>
                 <Depoimento
-                  nome="Will Leite"
+                  nome="Jessica Costa"
+                  cargo="Gerente de RH"
+                  nota={10}
+                  texto="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu odio ut sem nulla pharetra diam sit amet nisl."
+                  imagem="/img/depoimento-avatar-jessica-costa.jpg"
+                />
+              </SwiperSlide>
+
+              <SwiperSlide className={styles.swiperDepoimento}>
+                <Depoimento
+                  nome="Gustavo Guedes"
+                  cargo="Gerente de Qualidade"
+                  nota={9}
+                  texto="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu odio ut sem nulla pharetra diam sit amet nisl."
+                  imagem="/img/depoimento-avatar-gustavo-guedes.jpg"
+                />
+              </SwiperSlide>
+
+              <SwiperSlide className={styles.swiperDepoimento}>
+                <Depoimento
+                  nome="Monica Silva"
                   cargo="Gerente de RH"
                   nota={8}
                   texto="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu odio ut sem nulla pharetra diam sit amet nisl."
-                  imagem={`https://i.pravatar.cc/160?u=${Math.random()
-                    .toString(36)
-                    .replace(/[^a-z]+/g, '')
-                    .substr(2, 10)}`}
+                  imagem="/img/depoimento-avatar-monica-silva.jpg"
                 />
               </SwiperSlide>
+
               <SwiperSlide className={styles.swiperDepoimento}>
                 <Depoimento
-                  nome="Fábio Coala"
+                  nome="Will Leite"
                   cargo="Diretor Executivo"
                   nota={10}
                   texto="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu odio ut sem nulla pharetra diam sit amet nisl."
-                  imagem={`https://i.pravatar.cc/160?u=${Math.random()
-                    .toString(36)
-                    .replace(/[^a-z]+/g, '')
-                    .substr(2, 10)}`}
+                  imagem="/img/depoimento-avatar-will-leite.jpg"
+                />
+              </SwiperSlide>
+
+              <SwiperSlide className={styles.swiperDepoimento}>
+                <Depoimento
+                  nome="Patricia Prata"
+                  cargo="Diretor Executivo"
+                  nota={10}
+                  texto="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu odio ut sem nulla pharetra diam sit amet nisl."
+                  imagem="/img/depoimento-avatar-patricia-prata.jpg"
                 />
               </SwiperSlide>
             </Swiper>

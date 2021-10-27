@@ -88,7 +88,7 @@ export default function Plataformas(): JSX.Element {
 
           <Plataforma
             nome="Perfforme"
-            iconeUrl="/img/app-otimizze.png"
+            iconeUrl="/img/app-perfforme.png"
             descricao="Capacite os seus colaboradores para o desempenho total de suas capacidades técnicas vocacionais, competências e saberes."
             reverse
           />
@@ -97,7 +97,7 @@ export default function Plataformas(): JSX.Element {
 
           <Plataforma
             nome="Capacitte"
-            iconeUrl="/img/app-otimizze.png"
+            iconeUrl="/img/app-capacitte.png"
             descricao="Um centro de excelência impulsionando a cultura de um aprendizado dirigido ao desenvolvimento e crescimento sustentável da empresa."
           />
 
@@ -105,7 +105,7 @@ export default function Plataformas(): JSX.Element {
 
           <Plataforma
             nome="Levantt"
-            iconeUrl="/img/app-otimizze.png"
+            iconeUrl="/img/app-levantt.png"
             descricao="Acompanhamento o grau de satisfação e fidelidade dos clientes, objetivando o sucesso na relação de serviços e produtos ofertados."
             reverse
           />
