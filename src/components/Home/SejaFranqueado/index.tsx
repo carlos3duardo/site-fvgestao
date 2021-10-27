@@ -8,16 +8,31 @@ export default function SejaFranqueado(): JSX.Element {
       position="relative"
       overflow="hidden"
       color="gray.200"
+      backgroundImage="url(/img/home-franquia.jpg)"
+      backgroundRepeat="no-repeat"
+      backgroundPosition="center center"
+      backgroundSize="cover"
+      _after={{
+        content: '""',
+        position: 'absolute',
+        top: '0',
+        left: '0',
+        width: '100%',
+        height: '100%',
+        backgroundColor: `background.dark`,
+        opacity: { base: '0.7', lg: '0' },
+        zIndex: '0',
+      }}
     >
       <chakra.div
         position="absolute"
         bottom="0"
-        right="50%"
+        right={{ base: '80%', md: '70%', lg: '50%' }}
         width="100%"
         height="100%"
         background="background.dark"
-        // transform="matrix(0.97, 0, -0.27, 1, 0, 0)"
         zIndex="0"
+        opacity={{ base: '0.8', lg: '1' }}
         _after={{
           content: '""',
           position: 'absolute',
@@ -33,9 +48,9 @@ export default function SejaFranqueado(): JSX.Element {
       <Flex
         flex="1"
         justifyContent="flex-end"
-        padding="120px 0"
+        padding={{ base: '120px 2rem', lg: '120px 0' }}
         position="relative"
-        zIndex="1"
+        zIndex="2"
       >
         <chakra.div
           width={{ base: '100%', xl: '640px' }}
@@ -68,6 +83,7 @@ export default function SejaFranqueado(): JSX.Element {
         </chakra.div>
       </Flex>
       <Box
+        display={{ base: 'none', lg: 'block' }}
         flex="1"
         backgroundImage="url(/img/home-franquia.jpg)"
         backgroundRepeat="no-repeat"
