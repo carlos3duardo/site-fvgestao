@@ -1,3 +1,11 @@
-.swiperSlide {
+$sm: 30em;
+$md: 48em;
+$lg: 62em;
+$xl: 80em;
+
+.swiperDepoimento {
   width: 540px;
+  @media screen and (max-width: $md) {
+    width: 100%;
+  }
 }

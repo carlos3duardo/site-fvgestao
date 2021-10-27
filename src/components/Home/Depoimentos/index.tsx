@@ -35,11 +35,14 @@ interface DepoimentoProps {
 
 function Depoimento({ nome, imagem, cargo, nota, texto }: DepoimentoProps) {
   return (
-    <chakra.div paddingLeft="70px">
+    <chakra.div paddingLeft={{ base: '0', md: '70px' }}>
       <Box
         width="100%"
-        padding="1.25rem 1.25rem 1.25rem 90px"
-        margin="0"
+        padding={{
+          base: '5rem 2rem 2rem 2rem',
+          md: '1.25rem 1.25rem 1.25rem 90px',
+        }}
+        margin={{ base: '70px 0 0 0', md: '0' }}
         bgColor="#e5e5e5"
         borderRadius="0.5rem"
         position="relative"
@@ -53,9 +56,10 @@ function Depoimento({ nome, imagem, cargo, nota, texto }: DepoimentoProps) {
           borderColor="orange.500"
           overflow="hidden"
           position="absolute"
-          top="50%"
-          marginTop="-70px"
-          left="-70px"
+          top={{ base: '0', md: '50%' }}
+          marginTop={{ base: '-70px', md: '-70px' }}
+          left={{ base: '50%', md: '-70px' }}
+          marginLeft={{ base: '-70px', md: '0' }}
         >
           <Image src={imagem} width={140} height={140} />
         </chakra.figure>
@@ -108,12 +112,16 @@ export default function Depoimentos(): JSX.Element {
             background:
               'linear-gradient(90deg, rgba(52,73,94,0) 10%, rgba(52,73,94,1) 90%)',
             zIndex: '2',
+            display: {
+              base: 'none',
+              md: 'block',
+            },
           }}
         >
           <Flex
             direction={{ base: 'row', lg: 'column' }}
             justifyContent={{ base: 'space-between', lg: 'flex-start' }}
-            margin={{ base: '0 4rem 3rem 3rem', lg: '0' }}
+            margin={{ base: '0 1rem 2rem', lg: '0' }}
           >
             <Box>
               <Heading
@@ -127,7 +135,7 @@ export default function Depoimentos(): JSX.Element {
                 Clientes e parceiros
               </Heading>
             </Box>
-            <Box>
+            <Box marginRight={{ base: '0', md: '80px', lg: '0' }}>
               <HStack
                 width="100%"
                 direction="row"
@@ -171,7 +179,7 @@ export default function Depoimentos(): JSX.Element {
                 nextEl: '.customSwipeRightbutton',
               }}
             >
-              <SwiperSlide className={styles.swiperSlide}>
+              <SwiperSlide className={styles.swiperDepoimento}>
                 <Depoimento
                   nome="William Wallace"
                   cargo="Gerente de Qualidade"
@@ -183,7 +191,7 @@ export default function Depoimentos(): JSX.Element {
                     .substr(2, 10)}`}
                 />
               </SwiperSlide>
-              <SwiperSlide className={styles.swiperSlide}>
+              <SwiperSlide className={styles.swiperDepoimento}>
                 <Depoimento
                   nome="Tyler Durden"
                   cargo="Gerente de RH"
@@ -195,7 +203,7 @@ export default function Depoimentos(): JSX.Element {
                     .substr(2, 10)}`}
                 />
               </SwiperSlide>
-              <SwiperSlide className={styles.swiperSlide}>
+              <SwiperSlide className={styles.swiperDepoimento}>
                 <Depoimento
                   nome="Caio Júlio César"
                   cargo="Gestor de Processos"
@@ -207,7 +215,7 @@ export default function Depoimentos(): JSX.Element {
                     .substr(2, 10)}`}
                 />
               </SwiperSlide>
-              <SwiperSlide className={styles.swiperSlide}>
+              <SwiperSlide className={styles.swiperDepoimento}>
                 <Depoimento
                   nome="Will Leite"
                   cargo="Gerente de RH"
@@ -219,7 +227,7 @@ export default function Depoimentos(): JSX.Element {
                     .substr(2, 10)}`}
                 />
               </SwiperSlide>
-              <SwiperSlide className={styles.swiperSlide}>
+              <SwiperSlide className={styles.swiperDepoimento}>
                 <Depoimento
                   nome="Fábio Coala"
                   cargo="Diretor Executivo"

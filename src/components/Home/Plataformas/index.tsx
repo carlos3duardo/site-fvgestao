@@ -30,6 +30,38 @@ function Dots({ reverse = false }: LineDotsProps): JSX.Element {
   );
 }
 
+interface PlataformaProps {
+  iconeUrl: string;
+  nome: string;
+  descricao: string;
+  reverse?: boolean;
+}
+
+function Plataforma({
+  nome,
+  descricao,
+  iconeUrl,
+  reverse = false,
+}: PlataformaProps) {
+  return (
+    <Flex
+      alignItems="center"
+      direction={{ base: 'column', md: reverse ? 'row-reverse' : 'row' }}
+    >
+      <chakra.figure w="300px" textAlign="center">
+        <Image src={iconeUrl} alt={nome} width={229} height={160} />
+      </chakra.figure>
+      <Text
+        fontSize="1.5rem"
+        flex="1"
+        textAlign={{ base: 'center', md: reverse ? 'right' : 'left' }}
+      >
+        {descricao}
+      </Text>
+    </Flex>
+  );
+}
+
 export default function Plataformas(): JSX.Element {
   return (
     <Box padding="4rem 0" color="primary.500">
@@ -45,95 +77,38 @@ export default function Plataformas(): JSX.Element {
         >
           PLATAFORMAS
         </Heading>
-        <VStack>
-          <Flex direction={{ base: 'column', md: 'row' }} alignItems="center">
-            <chakra.figure w="300px" textAlign="center">
-              <Image
-                src="/img/app-otimizze.png"
-                alt="Otimizze"
-                width={229}
-                height={160}
-              />
-            </chakra.figure>
-            <Text
-              fontSize="1.5rem"
-              flex="1"
-              textAlign={{ base: 'center', md: 'left' }}
-            >
-              Aqui você identifica o grau de profissionalismo gerencial do seu
-              negócio através de planos operacionais, criando musculatura para
-              solidificar o seu negócio.
-            </Text>
-          </Flex>
+        <VStack spacing={{ base: '3rem', md: '0' }}>
+          <Plataforma
+            nome="Otimizze"
+            iconeUrl="/img/app-otimizze.png"
+            descricao="Aqui você identifica o grau de profissionalismo gerencial do seu negócio através de planos operacionais, criando musculatura para solidificar o seu negócio."
+          />
 
           <Dots />
 
-          <Flex
-            direction={{ base: 'column', md: 'row-reverse' }}
-            alignItems="center"
-          >
-            <chakra.figure w="300px" textAlign="center">
-              <Image
-                src="/img/app-otimizze.png"
-                alt="Otimizze"
-                width={229}
-                height={160}
-              />
-            </chakra.figure>
-            <Text
-              fontSize="1.5rem"
-              flex="1"
-              textAlign={{ base: 'center', md: 'right' }}
-            >
-              Capacite os seus colaboradores para o desempenho total de suas
-              capacidades técnicas vocacionais, competências e saberes.
-            </Text>
-          </Flex>
+          <Plataforma
+            nome="Perfforme"
+            iconeUrl="/img/app-otimizze.png"
+            descricao="Capacite os seus colaboradores para o desempenho total de suas capacidades técnicas vocacionais, competências e saberes."
+            reverse
+          />
 
           <Dots reverse />
 
-          <Flex direction={{ base: 'column', md: 'row' }} alignItems="center">
-            <chakra.figure w="300px" textAlign="center" position="relative">
-              <Image
-                src="/img/app-otimizze.png"
-                alt="Otimizze"
-                width={229}
-                height={160}
-              />
-            </chakra.figure>
-            <Text
-              fontSize="1.5rem"
-              flex="1"
-              textAlign={{ base: 'center', md: 'left' }}
-            >
-              Um centro de excelência impulsionando a cultura de um aprendizado
-              dirigido ao desenvolvimento e crescimento sustentável da empresa.
-            </Text>
-          </Flex>
+          <Plataforma
+            nome="Capacitte"
+            iconeUrl="/img/app-otimizze.png"
+            descricao="Um centro de excelência impulsionando a cultura de um aprendizado dirigido ao desenvolvimento e crescimento sustentável da empresa."
+          />
 
           <Dots />
 
-          <Flex
-            direction={{ base: 'column', md: 'row-reverse' }}
-            alignItems="center"
-          >
-            <chakra.figure w="300px" textAlign="center" position="relative">
-              <Image
-                src="/img/app-otimizze.png"
-                alt="Otimizze"
-                width={229}
-                height={160}
-              />
-            </chakra.figure>
-            <Text
-              fontSize="1.5rem"
-              flex="1"
-              textAlign={{ base: 'center', md: 'right' }}
-            >
-              Acompanhamento o grau de satisfação e fidelidade dos clientes,
-              objetivando o sucesso na relação de serviços e produtos ofertados.
-            </Text>
-          </Flex>
+          <Plataforma
+            nome="Levantt"
+            iconeUrl="/img/app-otimizze.png"
+            descricao="Acompanhamento o grau de satisfação e fidelidade dos clientes, objetivando o sucesso na relação de serviços e produtos ofertados."
+            reverse
+          />
         </VStack>
       </Container>
     </Box>
