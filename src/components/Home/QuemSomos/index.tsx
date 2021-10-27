@@ -14,7 +14,7 @@ import { Container } from '../../Layout';
 
 export default function QuemSomos(): JSX.Element {
   return (
-    <Box padding="4rem 1rem">
+    <Box padding="4rem 1rem" backgroundColor="gray.100">
       <Container>
         <Flex
           width="100%"

@@ -6,7 +6,7 @@ const theme = {
   styles: {
     global: {
       body: {
-        backgroundColor: 'gray.100',
+        backgroundColor: 'background.dark',
       },
     },
   },

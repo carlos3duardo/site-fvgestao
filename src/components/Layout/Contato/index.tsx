@@ -17,11 +17,8 @@ export default function Contato(): JSX.Element {
       width="100%"
       backgroundImage="url(/img/contato-background.png)"
       backgroundRepeat="no-repeat"
-      backgroundPosition={{
-        base: 'left center',
-        lg: 'center center',
-      }}
-      backgroundSize={{ base: 'auto', lg: 'cover' }}
+      backgroundPosition="center"
+      backgroundSize="cover"
       justifyContent="flex-end"
       overflow="hidden"
       position="relative"
@@ -59,7 +56,7 @@ export default function Contato(): JSX.Element {
             width={{ base: '100%', lg: '50%' }}
             position="relative"
             zIndex="1"
-            padding="0 0 0 2rem"
+            padding={{ base: '0', lg: '0 0 0 2rem' }}
           >
             <Heading
               as="h2"
@@ -96,7 +93,7 @@ export default function Contato(): JSX.Element {
                     isRequired
                   />
                 </GridItem>
-                <GridItem gridColumnEnd="span 8">
+                <GridItem gridColumnEnd={{ base: 'span 12', md: 'span 8' }}>
                   <Input
                     type="text"
                     name="municipio"
@@ -104,10 +101,10 @@ export default function Contato(): JSX.Element {
                     isRequired
                   />
                 </GridItem>
-                <GridItem gridColumnEnd="span 4">
+                <GridItem gridColumnEnd={{ base: 'span 12', md: 'span 4' }}>
                   <Input type="text" name="uf" label="Estado" isRequired />
                 </GridItem>
-                <GridItem gridColumnEnd="span 7">
+                <GridItem gridColumnEnd={{ base: 'span 12', md: 'span 7' }}>
                   <Input
                     type="text"
                     name="celular"
@@ -115,7 +112,7 @@ export default function Contato(): JSX.Element {
                     isRequired
                   />
                 </GridItem>
-                <GridItem gridColumnEnd="span 5">
+                <GridItem gridColumnEnd={{ base: 'span 12', md: 'span 5' }}>
                   <SubmitButton label="Enviar" />
                 </GridItem>
               </Grid>
