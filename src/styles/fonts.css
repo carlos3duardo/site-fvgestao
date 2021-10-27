@@ -1,0 +1,40 @@
+
+@font-face {
+  font-family: 'adineue PRO';
+  src: url('/fonts/adineuePRO_Light/adineuePROCyr-LightWeb.eot');
+  src: url('/fonts/adineuePRO_Light/adineuePROCyr-LightWeb.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/adineuePRO_Light/adineuePROCyr-LightWeb.woff') format('woff'),
+      url('/fonts/adineuePRO_Light/adineuePROCyr-LightWeb.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'adineue PRO';
+  src: url('/fonts/adineuePRO_Regular/adineuePRO.eot');
+  src: url('/fonts/adineuePRO_Regular/adineuePRO.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/adineuePRO_Regular/adineuePRO.woff') format('woff'),
+       url('/fonts/adineuePRO_Regular/adineuePRO.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'adineue PRO';
+  src: url('/fonts/adineuePRO_Bold/adineuePROBold.eot');
+  src: url('/fonts/adineuePRO_Bold/adineuePROBold.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/adineuePRO_Bold/adineuePROBold.woff') format('woff'),
+       url('/fonts/adineuePRO_Bold/adineuePROBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'adineue PRO';
+  src: url('/fonts/adineuePROCyr/adineuePROCyr-BoldWeb.eot');
+  src: url('/fonts/adineuePROCyr/adineuePROCyr-BoldWeb.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/adineuePROCyr/adineuePROCyr-BoldWeb.woff') format('woff'),
+      url('/fonts/adineuePROCyr/adineuePROCyr-BoldWeb.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
