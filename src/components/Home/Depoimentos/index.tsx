@@ -94,9 +94,9 @@ export default function Depoimentos(): JSX.Element {
         backgroundSize="155px 120px"
       >
         <Flex
-          direction="row"
+          direction={{ base: 'column', lg: 'row' }}
           width="100%"
-          paddingLeft="120px"
+          padding={{ base: '0 0rem', lg: '0 0 0 120px' }}
           position="relative"
           _before={{
             content: '""',
@@ -110,48 +110,57 @@ export default function Depoimentos(): JSX.Element {
             zIndex: '2',
           }}
         >
-          <chakra.div padding={{ base: '0', xl: '0 1rem 0 0' }}>
-            <Heading
-              as="h2"
-              fontSize={{ base: '1.75rem', md: '2.5rem' }}
-              color="orange.500"
-            >
-              Depoimentos
-            </Heading>
-            <Heading as="h3" fontSize="xl" fontWeight="regular">
-              Clientes e parceiros
-            </Heading>
-            <HStack
-              width="100%"
-              direction="row"
-              spacing="1rem"
-              align="center"
-              justify="flex-end"
-              fontSize="2rem"
-              color="orange.500"
-            >
-              <Box
-                className="customSwipeLeftbutton"
-                transition="all 0.2s ease"
-                _hover={{
-                  cursor: 'pointer',
-                  color: 'orange.700',
-                }}
+          <Flex
+            direction={{ base: 'row', lg: 'column' }}
+            justifyContent={{ base: 'space-between', lg: 'flex-start' }}
+            margin={{ base: '0 4rem 3rem 3rem', lg: '0' }}
+          >
+            <Box>
+              <Heading
+                as="h2"
+                fontSize={{ base: '1.75rem', md: '2.5rem' }}
+                color="orange.500"
               >
-                <Icon as={FaChevronLeft} />
-              </Box>
-              <Box
-                className="customSwipeRightbutton"
-                transition="all 0.2s ease"
-                _hover={{
-                  cursor: 'pointer',
-                  color: 'orange.700',
-                }}
+                Depoimentos
+              </Heading>
+              <Heading as="h3" fontSize="xl" fontWeight="regular">
+                Clientes e parceiros
+              </Heading>
+            </Box>
+            <Box>
+              <HStack
+                width="100%"
+                direction="row"
+                spacing={{ base: '2rem', lg: '1rem' }}
+                align="center"
+                justify="flex-end"
+                fontSize="2rem"
+                color="orange.500"
               >
-                <Icon as={FaChevronRight} />
-              </Box>
-            </HStack>
-          </chakra.div>
+                <Box
+                  className="customSwipeLeftbutton"
+                  transition="all 0.2s ease"
+                  _hover={{
+                    cursor: 'pointer',
+                    color: 'orange.700',
+                  }}
+                >
+                  <Icon as={FaChevronLeft} />
+                </Box>
+                <Box
+                  className="customSwipeRightbutton"
+                  transition="all 0.2s ease"
+                  _hover={{
+                    cursor: 'pointer',
+                    color: 'orange.700',
+                  }}
+                >
+                  <Icon as={FaChevronRight} />
+                </Box>
+              </HStack>
+            </Box>
+          </Flex>
+          <chakra.div padding={{ base: '0', xl: '0 1rem 0 0' }} />
           <chakra.div flex="1" overflow="hidden" position="relative">
             <Swiper
               slidesPerView="auto"

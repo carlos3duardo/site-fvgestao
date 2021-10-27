@@ -5,7 +5,8 @@ import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
 
 import { Container } from '../../Layout';
 
-import 'swiper/css/bundle';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 import styles from './styles.module.scss';
 
