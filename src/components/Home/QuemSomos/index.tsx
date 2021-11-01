@@ -60,7 +60,7 @@ export default function QuemSomos(): JSX.Element {
               tecnologia e a cultura gerencial voltadas para o êxito nos
               resultados do seu negócio.
             </Text>
-            <Link href="#quem-somos" passHref>
+            <Link href="/quem-somos" passHref>
               <Button
                 as="a"
                 colorScheme="orange"
