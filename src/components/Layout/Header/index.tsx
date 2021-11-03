@@ -20,7 +20,15 @@ export default function Header(): JSX.Element {
         justifyContent="space-between"
         padding={{ base: '20px 1rem', xl: '20px 0' }}
       >
-        <Image src="/img/fvgestao-logo-header.svg" width={158} height={48} />
+        <Link href="/" passHref>
+          <chakra.a>
+            <Image
+              src="/img/fvgestao-logo-header.svg"
+              width={158}
+              height={48}
+            />
+          </chakra.a>
+        </Link>
 
         <Box display={{ base: 'none', lg: 'block' }}>
           <HStack>

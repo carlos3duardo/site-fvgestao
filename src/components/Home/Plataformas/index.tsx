@@ -1,5 +1,14 @@
 import Image from 'next/image';
-import { Box, Flex, Heading, Text, VStack, chakra } from '@chakra-ui/react';
+import {
+  Button,
+  Box,
+  Flex,
+  Heading,
+  Text,
+  VStack,
+  chakra,
+} from '@chakra-ui/react';
+import Link from 'next/link';
 
 import { Container } from '../../Layout';
 
@@ -34,6 +43,7 @@ interface PlataformaProps {
   iconeUrl: string;
   nome: string;
   descricao: string;
+  href: string;
   reverse?: boolean;
 }
 
@@ -41,6 +51,7 @@ function Plataforma({
   nome,
   descricao,
   iconeUrl,
+  href,
   reverse = false,
 }: PlataformaProps) {
   return (
@@ -49,15 +60,46 @@ function Plataforma({
       direction={{ base: 'column', md: reverse ? 'row-reverse' : 'row' }}
     >
       <chakra.figure w="300px" textAlign="center">
-        <Image src={iconeUrl} alt={nome} width={229} height={160} />
+        <Image
+          src={iconeUrl}
+          alt={nome}
+          width={229}
+          height={160}
+          layout="fixed"
+        />
       </chakra.figure>
-      <Text
-        fontSize="1.5rem"
-        flex="1"
+      <chakra.div
         textAlign={{ base: 'center', md: reverse ? 'right' : 'left' }}
       >
-        {descricao}
-      </Text>
+        <Text
+          fontSize="1.5rem"
+          flex="1"
+          textAlign={{ base: 'center', md: reverse ? 'right' : 'left' }}
+          marginBottom="0.5rem"
+        >
+          {descricao}
+        </Text>
+        <Link href={href} passHref>
+          <Button
+            as="a"
+            colorScheme="orange"
+            variant="outline"
+            borderWidth="2px"
+            borderRadius="99px"
+            size="sm"
+            _hover={{
+              background: 'orange.50',
+            }}
+            _active={{
+              background: 'orange.500',
+              borderColor: 'orange.500',
+              textColor: '#ffffff',
+            }}
+          >
+            saiba mais
+          </Button>
+        </Link>
+      </chakra.div>
     </Flex>
   );
 }
@@ -82,6 +124,7 @@ export default function Plataformas(): JSX.Element {
             nome="Otimizze"
             iconeUrl="/img/app-otimizze.png"
             descricao="Aqui você identifica o grau de profissionalismo gerencial do seu negócio através de planos operacionais, criando musculatura para solidificar o seu negócio."
+            href="/plataforma/otimizze"
           />
 
           <Dots />
@@ -90,6 +133,7 @@ export default function Plataformas(): JSX.Element {
             nome="Perfforme"
             iconeUrl="/img/app-perfforme.png"
             descricao="Capacite os seus colaboradores para o desempenho total de suas capacidades técnicas vocacionais, competências e saberes."
+            href="/plataforma/perfforme"
             reverse
           />
 
@@ -99,6 +143,7 @@ export default function Plataformas(): JSX.Element {
             nome="Capacitte"
             iconeUrl="/img/app-capacitte.png"
             descricao="Um centro de excelência impulsionando a cultura de um aprendizado dirigido ao desenvolvimento e crescimento sustentável da empresa."
+            href="/plataforma/capacitte"
           />
 
           <Dots />
@@ -107,6 +152,7 @@ export default function Plataformas(): JSX.Element {
             nome="Levantt"
             iconeUrl="/img/app-levantt.png"
             descricao="Acompanhamento o grau de satisfação e fidelidade dos clientes, objetivando o sucesso na relação de serviços e produtos ofertados."
+            href="/plataforma/levantt"
             reverse
           />
         </VStack>

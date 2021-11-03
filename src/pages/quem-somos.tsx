@@ -1,12 +1,4 @@
-import {
-  Box,
-  Flex,
-  Grid,
-  GridItem,
-  chakra,
-  Heading,
-  Text,
-} from '@chakra-ui/react';
+import { Box, Flex, Grid, chakra, Heading, Text } from '@chakra-ui/react';
 import Head from 'next/head';
 import { Container, Header } from '../components/Layout';
 import Contato from '../components/Layout/Contato';
