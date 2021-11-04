@@ -19,6 +19,7 @@ import Contato from '../../components/Layout/Contato';
 import Footer from '../../components/Layout/Footer';
 import ViewBreakpoint from '../../components/Layout/ViewBreakpoint';
 import { Depoimentos } from '../../components/Home';
+import Accordion from '../../components/Accordion';
 
 export default function Otimizze(): JSX.Element {
   return (
@@ -195,7 +196,7 @@ export default function Otimizze(): JSX.Element {
           </Container>
         </Box>
 
-        <Box padding="5rem 0" bgColor="#e5e5e5">
+        <Box padding="5rem 0" bgColor="#e5e5e5" color="primary.800">
           <Container maxWidth="920px">
             <Heading as="h1" textAlign="center" textTransform="uppercase">
               Aumente os resultados
@@ -222,6 +223,37 @@ export default function Otimizze(): JSX.Element {
         </Box>
 
         <Depoimentos />
+
+        <Box padding="5rem 0" bgColor="#e5e5e5" color="primary.800">
+          <Container maxWidth="920px">
+            <Heading as="h1" textAlign="center" textTransform="uppercase">
+              Dúvidas Frequentes
+            </Heading>
+            <chakra.div marginTop="2rem">
+              <Accordion
+                items={[
+                  {
+                    title:
+                      'Quais são os pré-requisitos para utilizar a plataforma?',
+                    description:
+                      'Ter conhecimento dos processos gerenciais de sua empresa.',
+                    showDescription: true,
+                  },
+                  {
+                    title:
+                      'Posso aplicar um auto-diagnóstico sem a necessidade ' +
+                      'de um consultor empresarial?',
+                    description:
+                      'Sim. Oferecemos avaliações que sua organização poderá ' +
+                      'realizar sem auxílio, e nossa plataforma gera um ' +
+                      'relatório de feedback de acordo com as suas respostas.',
+                    showDescription: false,
+                  },
+                ]}
+              />
+            </chakra.div>
+          </Container>
+        </Box>
 
         <Contato />
         <Footer />
