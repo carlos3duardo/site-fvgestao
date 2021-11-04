@@ -1,9 +1,6 @@
-import { Box, VStack, chakra, Icon } from '@chakra-ui/react';
-import { motion } from 'framer-motion';
+import { VStack, chakra, Icon } from '@chakra-ui/react';
 import { useState } from 'react';
 import { BsChevronDown } from 'react-icons/bs';
-
-const MotionBox = motion(Box);
 
 interface ItemProps {
   title: string;
@@ -40,6 +37,7 @@ function AccordionItem({
         flexDirection="row"
         justifyContent="space-between"
         alignItems="center"
+        cursor="pointer"
         onClick={() => setOpened(!opened)}
       >
         <chakra.div>{title}</chakra.div>
