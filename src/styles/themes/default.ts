@@ -5,6 +5,9 @@ import { extendTheme } from '@chakra-ui/react';
 const theme = {
   styles: {
     global: {
+      html: {
+        scrollBehavior: 'smooth',
+      },
       body: {
         backgroundColor: 'background.dark',
       },
@@ -28,7 +31,8 @@ const theme = {
       dark: '#2C3E50',
       light: '#34495E',
       lighter: '#395571',
-      gray: '#e5e5e5',
+      gray: '#d6d6d6',
+      grayLight: '#e5e5e5',
     },
     gradient: {
       primary: 'linear-gradient(90deg, #F83600 0%, #FE8C00 100%)',

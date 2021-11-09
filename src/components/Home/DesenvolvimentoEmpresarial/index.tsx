@@ -54,7 +54,7 @@ export default function DesenvolvimentoEmpresarial(): JSX.Element {
             o processo de melhoria será contínuo.
           </Text>
 
-          <Link href="#quem-somos" passHref>
+          <Link href="/desenvolvimento-empresarial" passHref>
             <Button
               as="a"
               colorScheme="orange"
