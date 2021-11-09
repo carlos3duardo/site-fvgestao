@@ -42,7 +42,7 @@ function AccordionItem({
       >
         <chakra.div>{title}</chakra.div>
         <chakra.div
-          transition="transform 0.6s ease-in-out"
+          transition="all 0.6s ease"
           transform={opened ? 'rotate(180deg)' : 'rotate(0deg)'}
         >
           <Icon as={BsChevronDown} w={8} h={8} />
@@ -58,7 +58,7 @@ function AccordionItem({
         <chakra.p
           m="0"
           bgColor="background.dark"
-          maxHeight={opened ? '100px' : '0'}
+          maxHeight={opened ? '50rem' : '0'}
           paddingX="2rem"
           paddingY={opened ? '1rem' : '0'}
           opacity={opened ? '1' : '0'}

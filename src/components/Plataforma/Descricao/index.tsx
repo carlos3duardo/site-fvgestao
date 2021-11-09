@@ -2,10 +2,12 @@ import { Box, BoxProps, chakra, Heading } from '@chakra-ui/react';
 import { Container } from '../../Layout';
 
 interface DescricaoProps extends BoxProps {
+  titulo: string;
   backgroundImage: string;
 }
 
 export default function Descricao({
+  titulo,
   backgroundImage,
   children,
   ...rest
@@ -50,7 +52,7 @@ export default function Descricao({
             position="relative"
             zIndex="1"
           >
-            Otimize os processos de gestão
+            {titulo}
           </Heading>
           <chakra.div
             fontSize="1.5rem"

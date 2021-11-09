@@ -122,7 +122,7 @@ export default function Plataformas(): JSX.Element {
         <VStack spacing={{ base: '3rem', md: '0' }}>
           <Plataforma
             nome="Otimizze"
-            iconeUrl="/img/app-otimizze.png"
+            iconeUrl="/img/plataformas/otimizze-logo.png"
             descricao="Aqui você identifica o grau de profissionalismo gerencial do seu negócio através de planos operacionais, criando musculatura para solidificar o seu negócio."
             href="/plataforma/otimizze"
           />
@@ -131,7 +131,7 @@ export default function Plataformas(): JSX.Element {
 
           <Plataforma
             nome="Perfforme"
-            iconeUrl="/img/app-perfforme.png"
+            iconeUrl="/img/plataformas/perfforme-logo.png"
             descricao="Capacite os seus colaboradores para o desempenho total de suas capacidades técnicas vocacionais, competências e saberes."
             href="/plataforma/perfforme"
             reverse
@@ -141,7 +141,7 @@ export default function Plataformas(): JSX.Element {
 
           <Plataforma
             nome="Capacitte"
-            iconeUrl="/img/app-capacitte.png"
+            iconeUrl="/img/plataformas/capacitte-logo.png"
             descricao="Um centro de excelência impulsionando a cultura de um aprendizado dirigido ao desenvolvimento e crescimento sustentável da empresa."
             href="/plataforma/capacitte"
           />
@@ -150,7 +150,7 @@ export default function Plataformas(): JSX.Element {
 
           <Plataforma
             nome="Levantt"
-            iconeUrl="/img/app-levantt.png"
+            iconeUrl="/img/plataformas/levantt-logo.png"
             descricao="Acompanhamento o grau de satisfação e fidelidade dos clientes, objetivando o sucesso na relação de serviços e produtos ofertados."
             href="/plataforma/levantt"
             reverse

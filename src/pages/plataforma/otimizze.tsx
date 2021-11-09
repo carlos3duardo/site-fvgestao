@@ -24,7 +24,7 @@ export default function Otimizze(): JSX.Element {
   return (
     <>
       <Head>
-        <title>FV Gestão | Quem Somos</title>
+        <title>FV Gestão | Otimizze</title>
       </Head>
       <Flex direction="column" width="100%" height="100%" minHeight="100vh">
         <Header />
@@ -34,11 +34,14 @@ export default function Otimizze(): JSX.Element {
             appTexto="Gerencie a rotina de implementação das oportunidades de melhoria da sua gestão."
             appLogoUrl="/img/plataformas/otimizze-logo.png"
             videoCapaUrl="/img/plataformas/otimizze-capa-video.jpg"
-            videoUrl=""
+            videoUrl="https://www.youtube.com/embed/3MmG2AlAbZk"
           />
         </Box>
 
-        <Descricao backgroundImage="/img/plataformas/otimizze-descricao-background.jpg">
+        <Descricao
+          titulo="Otimize os processos de gestão"
+          backgroundImage="/img/plataformas/otimizze-descricao-background.jpg"
+        >
           <Text mb="1rem">
             A plataforma atua em duas frentes: empresas e consultores.
           </Text>

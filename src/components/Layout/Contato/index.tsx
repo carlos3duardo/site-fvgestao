@@ -22,6 +22,7 @@ export default function Contato(): JSX.Element {
       justifyContent="flex-end"
       overflow="hidden"
       position="relative"
+      id="contato"
     >
       <chakra.div
         position="absolute"

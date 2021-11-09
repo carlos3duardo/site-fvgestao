@@ -1,4 +1,4 @@
-import { Box, Flex } from '@chakra-ui/react';
+import { Box, chakra, Flex } from '@chakra-ui/react';
 import Head from 'next/head';
 import {
   Clientes,
@@ -24,11 +24,27 @@ export default function Home(): JSX.Element {
         <Header />
         <Box flex="1">
           <WelcomeBanner />
-          <QuemSomos />
-          <DesenvolvimentoEmpresarial />
-          <Plataformas />
-          <Clientes />
-          <Depoimentos />
+
+          <chakra.div id="quem-somos">
+            <QuemSomos />
+          </chakra.div>
+
+          <chakra.div id="desenvolvimento-empresarial">
+            <DesenvolvimentoEmpresarial />
+          </chakra.div>
+
+          <chakra.div id="plataformas">
+            <Plataformas />
+          </chakra.div>
+
+          <chakra.div id="clientes">
+            <Clientes />
+          </chakra.div>
+
+          <chakra.div id="depoimentos">
+            <Depoimentos />
+          </chakra.div>
+
           <SejaFranqueado />
         </Box>
         <Contato />

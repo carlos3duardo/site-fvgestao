@@ -68,7 +68,7 @@ export default function SejaFranqueado(): JSX.Element {
             ampla rede de parceiros que se beneficiam com o diferencial da FV
             GESTÃO, que está na agilidade dos processos.
           </Text>
-          <Link href="/" passHref>
+          <Link href="/seja-franqueado" passHref>
             <Button
               as="a"
               background="gradient.primary"
