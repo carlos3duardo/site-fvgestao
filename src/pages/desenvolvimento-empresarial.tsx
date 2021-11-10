@@ -14,7 +14,6 @@ import { Container, Header } from '../components/Layout';
 import Contato from '../components/Layout/Contato';
 import Footer from '../components/Layout/Footer';
 import ViewBreakpoint from '../components/Layout/ViewBreakpoint';
-import { Depoimentos } from '../components/Home';
 
 export default function Levantt(): JSX.Element {
   return (
@@ -39,9 +38,11 @@ export default function Levantt(): JSX.Element {
             justifyContent="center"
             color="background.dark"
           >
-            <Heading as="h1" fontSize="2.5rem">
-              Programa de Desenvolvimento Empresarial
-            </Heading>
+            <Container>
+              <Heading as="h1" fontSize="2.5rem" textAlign="center">
+                Programa de Desenvolvimento Empresarial
+              </Heading>
+            </Container>
           </chakra.figure>
 
           <chakra.div
@@ -77,14 +78,20 @@ export default function Levantt(): JSX.Element {
                 &quot;outcome&quot;.
               </Text>
 
-              <Flex direction="row">
-                <chakra.figure position="relative" mr="2rem">
-                  <Image
-                    src="/img/man-on-the-laptop.jpg"
-                    width={381}
-                    height={488}
-                  />
-                </chakra.figure>
+              <Flex direction={{ base: 'column', md: 'row' }}>
+                <chakra.figure
+                  position="relative"
+                  margin={{
+                    base: '0rem 0rem 1.5rem 0rem',
+                    md: '0rem 1.5rem 1.5rem 0rem',
+                  }}
+                  backgroundImage="/img/man-on-the-laptop.jpg"
+                  backgroundRepeat="no-repeat"
+                  backgroundPosition="center center"
+                  backgroundSize="cover"
+                  width={{ base: '100%', md: '40%', lg: '50%' }}
+                  height={{ base: '340px', md: '530px' }}
+                />
                 <chakra.div flex="1">
                   <Text fontSize="1.5rem" mb="1.5rem">
                     A FVGestão possui expertise tanto na elaboração de modelos
@@ -114,7 +121,10 @@ export default function Levantt(): JSX.Element {
             color="background.dark"
           >
             <Container maxW="1024px">
-              <Grid templateColumns="1fr 1fr" gap="1.5rem">
+              <Grid
+                templateColumns={{ base: '1fr', md: '40% 60%' }}
+                gap="1.5rem"
+              >
                 <GridItem>
                   <Heading
                     as="h2"
@@ -136,13 +146,21 @@ export default function Levantt(): JSX.Element {
                   </Text>
                 </GridItem>
                 <GridItem>
-                  <Image
-                    src="/img/case-energisa-01.jpg"
-                    width={634}
-                    height={368}
+                  <chakra.figure
+                    position="relative"
+                    margin={{
+                      base: '0rem 0rem 1.5rem 0rem',
+                      md: '0rem 1.5rem 1.5rem 0rem',
+                    }}
+                    backgroundImage="/img/case-energisa-01.jpg"
+                    backgroundRepeat="no-repeat"
+                    backgroundPosition="center right"
+                    backgroundSize="cover"
+                    width="100%"
+                    height={{ base: '340px', md: '400px' }}
                   />
                 </GridItem>
-                <GridItem colSpan={2}>
+                <GridItem colSpan={{ base: 1, md: 2 }}>
                   <Text fontSize="1.25rem">
                     Depois dessa iniciativa bem sucedida, o programa se tornou
                     permanente no Estado da Paraíba (sendo até hoje coordenado

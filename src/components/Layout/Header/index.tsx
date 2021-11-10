@@ -20,6 +20,7 @@ import {
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { HiChevronDown } from 'react-icons/hi';
 
+import { FaHandshake } from 'react-icons/fa';
 import { Container } from '..';
 
 interface NavItemProps {
@@ -326,6 +327,31 @@ function MobileNav(): JSX.Element {
             subNav={navItem.children}
           />
         ))}
+        <Link href="/seja-franqueado" passHref>
+          <chakra.a
+            padding="0 1rem"
+            display="flex"
+            width="100%"
+            flexDirection="row"
+            justifyContent="flex-end"
+            alignItems="center"
+            color="orange.500"
+            _hover={{ color: 'orange.700' }}
+          >
+            <Box
+              flex="1"
+              textAlign="right"
+              fontSize="1.25rem"
+              fontWeight="semibold"
+            >
+              <Icon as={FaHandshake} w={8} h={8} />
+              &nbsp;&nbsp; Seja um franqueado
+            </Box>
+            <Box>
+              <Icon as={FaHandshake} w={8} h={8} opacity="0" />
+            </Box>
+          </chakra.a>
+        </Link>
       </Stack>
     </chakra.div>
   );

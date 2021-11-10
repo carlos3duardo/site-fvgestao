@@ -39,15 +39,22 @@ export default function VideoApresentacao({
 
   return (
     <>
-      <Box bgColor="#e5e5e5" padding="5rem 0">
+      <Box bgColor="background.grayLight" padding="5rem 0">
         <Container>
           <Flex
             width="100%"
             align="center"
             direction={{ base: 'column', lg: 'row' }}
           >
-            <chakra.div flex="1" textColor="primary.800">
-              <chakra.figure w="300px">
+            <chakra.div
+              flex="1"
+              textColor="primary.800"
+              textAlign={{ base: 'center', lg: 'left' }}
+            >
+              <chakra.figure
+                margin={{ base: '0 auto', md: '0 2rem 0 0' }}
+                width={{ base: '100%', lg: '50%' }}
+              >
                 <Image
                   src={appLogoUrl}
                   alt={appNome}
@@ -59,28 +66,9 @@ export default function VideoApresentacao({
               <Text fontSize="1.5rem" m="1rem 0">
                 {appTexto}
               </Text>
-              {/* <Link href="/quem-somos" passHref>
-              <Button
-                as="a"
-                colorScheme="orange"
-                variant="outline"
-                borderWidth="2px"
-                borderRadius="99px"
-                _hover={{
-                  background: 'orange.50',
-                }}
-                _active={{
-                  background: 'orange.500',
-                  borderColor: 'orange.500',
-                  textColor: '#ffffff',
-                }}
-              >
-                mais detalhes
-              </Button>
-            </Link> */}
             </chakra.div>
             <chakra.figure
-              width={{ base: '100%', lg: '520px', xl: '640px' }}
+              width={{ base: '100%', lg: '50%', xl: '640px' }}
               height={{ base: '260px', md: '420px' }}
               margin={{ base: '0 0 2rem 0', lg: '0 2rem 0 0' }}
               padding="1rem"
