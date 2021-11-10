@@ -28,9 +28,9 @@ const theme = {
   },
   colors: {
     background: {
-      dark: '#2C3E50',
-      light: '#34495E',
-      lighter: '#395571',
+      dark: '#0D4872',
+      light: '#1D5673',
+      lighter: '#226587',
       gray: '#d6d6d6',
       grayLight: '#e5e5e5',
     },
