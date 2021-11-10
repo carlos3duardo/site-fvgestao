@@ -2,16 +2,24 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {
   Box,
-  HStack,
   Button,
-  Icon,
   chakra,
+  Collapse,
+  Flex,
+  HStack,
+  Icon,
+  IconButton,
   Popover,
   PopoverTrigger,
   PopoverContent,
   PopoverBody,
+  Stack,
+  Text,
+  useDisclosure,
 } from '@chakra-ui/react';
+import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { HiChevronDown } from 'react-icons/hi';
+
 import { Container } from '..';
 
 interface NavItemProps {
@@ -148,11 +156,181 @@ function DesktopNav(): JSX.Element {
   );
 }
 
+interface MobibeNavToggleButtonProps {
+  isOpen: boolean;
+  onClick: () => void;
+}
+
+function MobileNavToggleButton({
+  isOpen,
+  onClick,
+}: MobibeNavToggleButtonProps): JSX.Element {
+  return (
+    <Flex display={{ base: 'flex', lg: 'none' }}>
+      <IconButton
+        onClick={onClick}
+        icon={
+          isOpen ? <CloseIcon w={5} h={5} /> : <HamburgerIcon w={7} h={7} />
+        }
+        variant="orange"
+        aria-label="Toggle Navigation"
+        _hover={{
+          backgroundColor: 'transparent',
+        }}
+      />
+    </Flex>
+  );
+}
+
+type MobileNavItemProps = {
+  label: string;
+  subNav?: NavItemProps[];
+  href: string;
+};
+
+function MobileNavItem({
+  label,
+  subNav,
+  href,
+}: MobileNavItemProps): JSX.Element {
+  const { isOpen, onToggle } = useDisclosure();
+
+  return (
+    <chakra.li margin="0" padding="0" width="100%">
+      {subNav ? (
+        <Flex
+          width="100%"
+          padding="0 1rem"
+          direction="row"
+          justifyContent="flex-end"
+          alignItems="center"
+          _hover={{ color: 'orange.500' }}
+          onClick={subNav && onToggle}
+        >
+          <Box
+            flex="1"
+            textAlign="right"
+            fontSize="1.25rem"
+            fontWeight="semibold"
+            _hover={{ cursor: 'pointer' }}
+          >
+            {label}
+          </Box>
+          <Box>
+            <Icon
+              as={HiChevronDown}
+              w={8}
+              h={8}
+              transition="all 0.2s ease"
+              transform={isOpen ? 'rotate(180deg)' : ''}
+            />
+          </Box>
+        </Flex>
+      ) : (
+        <Link href={href} passHref>
+          <chakra.a
+            padding="0 1rem"
+            display="flex"
+            width="100%"
+            flexDirection="row"
+            justifyContent="flex-end"
+            alignItems="center"
+            _hover={{ color: 'orange.500' }}
+          >
+            <Box
+              flex="1"
+              textAlign="right"
+              fontSize="1.25rem"
+              fontWeight="semibold"
+            >
+              {label}
+            </Box>
+            <Box>
+              <Icon as={HiChevronDown} w={8} h={8} opacity="0" />
+            </Box>
+          </chakra.a>
+        </Link>
+      )}
+      {subNav && (
+        <Collapse
+          in={isOpen}
+          animateOpacity
+          style={{ marginTop: '0!important' }}
+        >
+          <Stack
+            padding="0.5rem 3rem 0.5rem 2rem"
+            margin="0.25rem 0 0 0"
+            align="end"
+            fontSize="1.25rem"
+            fontWeight="semibold"
+            position="relative"
+            _after={{
+              content: '""',
+              position: 'absolute',
+              top: '0',
+              right: '1.8rem',
+              backgroundColor: 'gray.500',
+              width: '6px',
+              height: '100%',
+              borderRadius: '3px',
+            }}
+          >
+            {subNav.map(child => (
+              <Link key={child.label} href={child.href} passHref>
+                <chakra.a
+                  color="gray.200"
+                  _hover={{ color: 'orange.500' }}
+                  position="relative"
+                  _after={{
+                    content: '""',
+                    position: 'absolute',
+                    top: '50%',
+                    backgroundColor: 'background.light',
+                    height: '12px',
+                    width: '12px',
+                    right: '-22px',
+                    marginTop: '-6px',
+                    borderRadius: '6px',
+                    borderWidth: '3px',
+                    borderStyle: 'solid',
+                    borderColor: 'gray.500',
+                    zIndex: 1,
+                  }}
+                >
+                  {child.label}
+                </chakra.a>
+              </Link>
+            ))}
+          </Stack>
+        </Collapse>
+      )}
+    </chakra.li>
+  );
+}
+
 function MobileNav(): JSX.Element {
-  return <div>123</div>;
+  return (
+    <chakra.div
+      display={{ lg: 'none' }}
+      borderTop="1px solid rgba(255, 255, 255, 0.2)"
+    >
+      <Stack as="ul" listStyleType="none" padding="1rem 0">
+        {navItems.map(navItem => (
+          <MobileNavItem
+            key={navItem.label}
+            label={navItem.label}
+            href={navItem.href}
+            subNav={navItem.children}
+          />
+        ))}
+      </Stack>
+    </chakra.div>
+  );
 }
 
 export default function Header(): JSX.Element {
+  const { isOpen, onToggle } = useDisclosure();
+
   return (
     <chakra.header
       position="fixed"
@@ -198,10 +376,11 @@ export default function Header(): JSX.Element {
           </Link>
         </Box>
 
-        <Box display={{ base: 'block', lg: 'none' }}>
-          <MobileNav />
-        </Box>
+        <MobileNavToggleButton isOpen={isOpen} onClick={onToggle} />
       </Container>
+      <Collapse in={isOpen} animateOpacity>
+        <MobileNav />
+      </Collapse>
     </chakra.header>
   );
 }
