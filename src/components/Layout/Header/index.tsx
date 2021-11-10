@@ -281,6 +281,7 @@ function MobileNavItem({
                   color="gray.200"
                   _hover={{ color: 'orange.500' }}
                   position="relative"
+                  textAlign="right"
                   _after={{
                     content: '""',
                     position: 'absolute',
