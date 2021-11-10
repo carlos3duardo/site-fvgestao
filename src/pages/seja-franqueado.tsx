@@ -28,75 +28,78 @@ export default function SejaFranqueado(): JSX.Element {
         <Header />
         <Box flex="1" marginTop="96px">
           <chakra.div bgColor="background.grayLight" padding="5rem 0">
-            <Container>
-              <Flex
-                width="100%"
-                align="center"
-                direction={{ base: 'column', lg: 'row' }}
+            <Container
+              display="flex"
+              flexDirection={{ base: 'column', lg: 'row' }}
+              alignItems="center"
+              justifyContent="space-between"
+            >
+              <chakra.div
+                flex="1"
+                textAlign={{ base: 'center', lg: 'left' }}
+                mb={{ base: '3rem', lg: '0' }}
               >
-                <chakra.div flex="1" textColor="background.dark">
-                  <Heading as="h2" fontSize="3rem" mb="1rem" color="orange.500">
-                    Faça parte da nossa história!
-                  </Heading>
-                  <Text fontSize="1.85rem" mb="1rem">
-                    A atuação da FVGestão é pautada pela simplicidade,
-                    objetividade e praticidade.
-                  </Text>
-                  <Link href="/quem-somos" passHref>
-                    <Button
-                      as="a"
-                      colorScheme="orange"
-                      variant="outline"
-                      borderWidth="2px"
-                      borderRadius="99px"
-                      _hover={{
-                        background: 'orange.50',
-                      }}
-                      _active={{
-                        background: 'orange.500',
-                        borderColor: 'orange.500',
-                        textColor: '#ffffff',
-                      }}
-                    >
-                      Quero saber mais
-                    </Button>
-                  </Link>
-                </chakra.div>
-                <chakra.figure
-                  width={{ base: '100%', lg: '520px', xl: '640px' }}
-                  height={{ base: '260px', md: '420px' }}
-                  margin={{ base: '0 0 2rem 0', lg: '0 0 0 2rem' }}
-                  padding="1rem"
-                  backgroundImage="img/seja-franqueado-video-capa.jpg"
-                  backgroundRepeat="no-repeat"
-                  backgroundPosition="center center"
-                  backgroundSize="cover"
-                  backgroundColor="orange.100"
-                  borderRadius="0.5rem"
-                  boxShadow="0 .175rem .175rem rgba(0, 0, 0, 0.15)"
-                >
-                  <Flex
-                    width="100%"
-                    height="100%"
+                <Heading as="h2" fontSize="3rem" mb="1rem" color="orange.500">
+                  Faça parte da nossa história!
+                </Heading>
+                <Text fontSize="1.85rem" mb="1rem">
+                  A atuação da FVGestão é pautada pela simplicidade,
+                  objetividade e praticidade.
+                </Text>
+                <Link href="/quem-somos" passHref>
+                  <Button
+                    as="a"
+                    colorScheme="orange"
+                    variant="outline"
                     borderWidth="2px"
-                    borderColor="orange.500"
-                    borderRadius=".5rem"
-                    transition="all 0.2s ease"
-                    align="center"
-                    justify="center"
+                    borderRadius="99px"
                     _hover={{
-                      backgroundColor: 'rgba(254, 140, 0, 0.2)',
+                      background: 'orange.50',
+                    }}
+                    _active={{
+                      background: 'orange.500',
+                      borderColor: 'orange.500',
+                      textColor: '#ffffff',
                     }}
                   >
-                    <Icon
-                      as={MdPlayCircleOutline}
-                      w="4rem"
-                      h="4rem"
-                      color="white"
-                    />
-                  </Flex>
-                </chakra.figure>
-              </Flex>
+                    Quero saber mais
+                  </Button>
+                </Link>
+              </chakra.div>
+              <chakra.figure
+                width={{ base: '100%', lg: '520px', xl: '640px' }}
+                height={{ base: '260px', md: '420px' }}
+                margin={{ base: '0 0 2rem 0', lg: '0 0 0 2rem' }}
+                padding="1rem"
+                backgroundImage="img/seja-franqueado-video-capa.jpg"
+                backgroundRepeat="no-repeat"
+                backgroundPosition="center center"
+                backgroundSize="cover"
+                backgroundColor="orange.100"
+                borderRadius="0.5rem"
+                boxShadow="0 .175rem .175rem rgba(0, 0, 0, 0.15)"
+              >
+                <Flex
+                  width="100%"
+                  height="100%"
+                  borderWidth="2px"
+                  borderColor="orange.500"
+                  borderRadius=".5rem"
+                  transition="all 0.2s ease"
+                  align="center"
+                  justify="center"
+                  _hover={{
+                    backgroundColor: 'rgba(254, 140, 0, 0.2)',
+                  }}
+                >
+                  <Icon
+                    as={MdPlayCircleOutline}
+                    w="4rem"
+                    h="4rem"
+                    color="white"
+                  />
+                </Flex>
+              </chakra.figure>
             </Container>
           </chakra.div>
         </Box>
