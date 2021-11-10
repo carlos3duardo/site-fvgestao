@@ -278,6 +278,8 @@ function MobileNavItem({
             {subNav.map(child => (
               <Link key={child.label} href={child.href} passHref>
                 <chakra.a
+                  display="block"
+                  width="100%"
                   color="gray.200"
                   _hover={{ color: 'orange.500' }}
                   position="relative"
