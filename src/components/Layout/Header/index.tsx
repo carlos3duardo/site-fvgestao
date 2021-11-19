@@ -365,7 +365,7 @@ export default function Header(): JSX.Element {
       position="fixed"
       zIndex="99"
       width="100%"
-      bgColor="background.light"
+      bgColor="background.dark"
       color="gray.100"
       boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
     >

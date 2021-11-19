@@ -49,7 +49,6 @@ export default function Home(): JSX.Element {
         </Box>
         <Contato />
         <Footer />
-        <ViewBreakpoint />
       </Flex>
     </>
   );

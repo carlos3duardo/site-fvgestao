@@ -7,7 +7,7 @@ export default function WelcomeBanner(): JSX.Element {
       width="100%"
       height="100vh"
       backgroundColor="background.light"
-      backgroundImage="/img/home-welcome.jpg"
+      backgroundImage="/img/home-welcome-black.jpg"
       backgroundRepeat="no-repeat"
       backgroundPosition="center center"
       backgroundSize="cover"
