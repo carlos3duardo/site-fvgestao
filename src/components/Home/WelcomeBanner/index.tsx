@@ -7,12 +7,31 @@ export default function WelcomeBanner(): JSX.Element {
       width="100%"
       height="100vh"
       backgroundColor="background.light"
-      backgroundImage="/img/home-welcome-black.jpg"
+      backgroundImage="/img/home-welcome.png"
       backgroundRepeat="no-repeat"
       backgroundPosition="center center"
       backgroundSize="cover"
       position="relative"
     >
+      <chakra.div
+        position="absolute"
+        top="0"
+        left="0"
+        height="100%"
+        width="48%"
+        backgroundColor="background.dark"
+        _after={{
+          content: '""',
+          position: 'absolute',
+          bottom: '0',
+          left: '100%',
+          width: '0px',
+          height: '100vh',
+          borderWidth: '100vh 250px 0 0',
+          borderColor: 'transparent',
+          borderTopColor: `background.dark`,
+        }}
+      />
       <Flex
         direction="row"
         alignItems="center"

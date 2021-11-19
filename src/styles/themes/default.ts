@@ -9,7 +9,7 @@ const theme = {
         scrollBehavior: 'smooth',
       },
       body: {
-        backgroundColor: 'background.dark',
+        backgroundColor: 'background.light',
       },
     },
   },
@@ -28,9 +28,9 @@ const theme = {
   },
   colors: {
     background: {
-      dark: '#1f1f1f',
-      light: '#424242',
-      lighter: '#636363',
+      dark: '#161b23',
+      light: '#292f38',
+      lighter: '#343c45',
       gray: '#d6d6d6',
       grayLight: '#e5e5e5',
     },
