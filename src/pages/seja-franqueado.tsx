@@ -71,7 +71,7 @@ export default function SejaFranqueado(): JSX.Element {
                 height={{ base: '260px', md: '420px' }}
                 margin={{ base: '0 0 2rem 0', lg: '0 0 0 2rem' }}
                 padding="1rem"
-                backgroundImage="img/seja-franqueado-video-capa.jpg"
+                backgroundImage="/img/seja-franqueado-video-capa.jpg"
                 backgroundRepeat="no-repeat"
                 backgroundPosition="center center"
                 backgroundSize="cover"
