@@ -61,10 +61,10 @@ export default function QuemSomos(): JSX.Element {
                     textAlign="center"
                     textTransform="uppercase"
                   >
-                    Missão
+                    Propósito
                   </Heading>
                   <Text fontSize="1.25rem" textAlign="center">
-                    Contribuir para uma cultura vencedora.
+                    Promover uma cultura vencedora.
                   </Text>
                 </chakra.div>
                 <chakra.div>
@@ -74,10 +74,11 @@ export default function QuemSomos(): JSX.Element {
                     textAlign="center"
                     textTransform="uppercase"
                   >
-                    Visão
+                    Missão
                   </Heading>
                   <Text fontSize="1.25rem" textAlign="center">
-                    &nbsp;
+                    Aprimorar a gestão com o uso de tecnologias e educação
+                    corporativa.
                   </Text>
                 </chakra.div>
                 <chakra.div>
@@ -90,8 +91,7 @@ export default function QuemSomos(): JSX.Element {
                     Valores
                   </Heading>
                   <Text fontSize="1.25rem" textAlign="center">
-                    Confiança, transparência, comprometimento, união, igualdade
-                    e lealdade.
+                    X
                   </Text>
                 </chakra.div>
               </Grid>

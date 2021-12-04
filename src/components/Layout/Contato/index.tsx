@@ -8,10 +8,34 @@ import {
   Grid,
   GridItem,
 } from '@chakra-ui/react';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import { Container } from '..';
+import { api } from '../../../services/api';
 import { Input, SubmitButton } from '../../FormElements';
 
-export default function Contato(): JSX.Element {
+interface ContatoProps {
+  pagina: string;
+}
+
+interface FormProps {
+  pagina: string;
+  nome: string;
+  empresa: string;
+  email: string;
+  municipio: string;
+  estado: string;
+  celular: string;
+}
+
+export default function Contato({ pagina }: ContatoProps): JSX.Element {
+  const { register, handleSubmit } = useForm();
+
+  const onSubmit: SubmitHandler<FormProps> = async data => {
+    const response = await api.post('/contato', data);
+
+    console.log(response.status, response.data);
+  };
+
   return (
     <Flex
       width="100%"
@@ -73,10 +97,23 @@ export default function Contato(): JSX.Element {
             >
               Preencha o formulário e entraremos em contato com você
             </Text>
-            <chakra.form marginTop="2rem">
+            <chakra.form marginTop="2rem" onSubmit={handleSubmit(onSubmit)}>
+              <input
+                type="hidden"
+                id="pagina"
+                name="pagina"
+                value={pagina}
+                {...register('pagina')}
+              />
               <Grid templateColumns="repeat(12, 1fr)" gap="1.125rem">
                 <GridItem gridColumnEnd="span 12">
-                  <Input type="text" name="nome" label="Seu nome" isRequired />
+                  <Input
+                    type="text"
+                    name="nome"
+                    label="Seu nome"
+                    isRequired
+                    {...register('nome')}
+                  />
                 </GridItem>
                 <GridItem gridColumnEnd="span 12">
                   <Input
@@ -84,6 +121,7 @@ export default function Contato(): JSX.Element {
                     name="empresa"
                     label="Nome da sua empresa"
                     isRequired
+                    {...register('empresa')}
                   />
                 </GridItem>
                 <GridItem gridColumnEnd="span 12">
@@ -92,6 +130,7 @@ export default function Contato(): JSX.Element {
                     name="email"
                     label="Seu e-mail"
                     isRequired
+                    {...register('email')}
                   />
                 </GridItem>
                 <GridItem gridColumnEnd={{ base: 'span 12', md: 'span 8' }}>
@@ -100,10 +139,17 @@ export default function Contato(): JSX.Element {
                     name="municipio"
                     label="Sua cidade"
                     isRequired
+                    {...register('municipio')}
                   />
                 </GridItem>
                 <GridItem gridColumnEnd={{ base: 'span 12', md: 'span 4' }}>
-                  <Input type="text" name="uf" label="Estado" isRequired />
+                  <Input
+                    type="text"
+                    name="uf"
+                    label="Estado"
+                    isRequired
+                    {...register('uf')}
+                  />
                 </GridItem>
                 <GridItem gridColumnEnd={{ base: 'span 12', md: 'span 7' }}>
                   <Input
@@ -111,6 +157,7 @@ export default function Contato(): JSX.Element {
                     name="celular"
                     label="Seu celular"
                     isRequired
+                    {...register('celular')}
                   />
                 </GridItem>
                 <GridItem gridColumnEnd={{ base: 'span 12', md: 'span 5' }}>
