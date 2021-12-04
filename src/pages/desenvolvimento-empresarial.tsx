@@ -8,12 +8,10 @@ import {
   Text,
 } from '@chakra-ui/react';
 import Head from 'next/head';
-import Image from 'next/image';
 
 import { Container, Header } from '../components/Layout';
 import Contato from '../components/Layout/Contato';
 import Footer from '../components/Layout/Footer';
-import ViewBreakpoint from '../components/Layout/ViewBreakpoint';
 
 export default function Levantt(): JSX.Element {
   return (
@@ -183,11 +181,9 @@ export default function Levantt(): JSX.Element {
           </chakra.div>
         </Box>
 
-        <Contato />
+        <Contato pagina="Desenvolvimento Empresarial" />
 
         <Footer />
-
-        <ViewBreakpoint />
       </Flex>
     </>
   );

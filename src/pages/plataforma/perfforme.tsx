@@ -1,18 +1,9 @@
-import {
-  Box,
-  Flex,
-  chakra,
-  Heading,
-  Text,
-  UnorderedList,
-  ListItem,
-} from '@chakra-ui/react';
+import { Box, Flex, chakra, Heading, Text } from '@chakra-ui/react';
 import Head from 'next/head';
 
 import { Container, Header } from '../../components/Layout';
 import Contato from '../../components/Layout/Contato';
 import Footer from '../../components/Layout/Footer';
-import ViewBreakpoint from '../../components/Layout/ViewBreakpoint';
 import { Depoimentos } from '../../components/Home';
 import {
   Descricao,
@@ -89,9 +80,8 @@ export default function Perfforme(): JSX.Element {
           </Container>
         </Box>
 
-        <Contato />
+        <Contato pagina="Plataforma Perfforme" />
         <Footer />
-        <ViewBreakpoint />
       </Flex>
     </>
   );
