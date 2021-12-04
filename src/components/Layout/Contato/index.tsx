@@ -28,7 +28,7 @@ interface FormProps {
 }
 
 export default function Contato({ pagina }: ContatoProps): JSX.Element {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, formState } = useForm();
 
   const onSubmit: SubmitHandler<FormProps> = async data => {
     const response = await api.post('/contato', data);
@@ -161,7 +161,10 @@ export default function Contato({ pagina }: ContatoProps): JSX.Element {
                   />
                 </GridItem>
                 <GridItem gridColumnEnd={{ base: 'span 12', md: 'span 5' }}>
-                  <SubmitButton label="Enviar" />
+                  <SubmitButton
+                    label="Enviar"
+                    isLoading={formState.isSubmitting}
+                  />
                 </GridItem>
               </Grid>
               <VStack spacing="1.25rem" />
