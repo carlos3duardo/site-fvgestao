@@ -32,8 +32,10 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     msgText = msgText.replace('{pagina}', req.body.pagina);
 
     const transport = nodemailer.createTransport({
-      host: process.env.MAIL_HOST,
-      port: process.env.MAIL_PORT,
+      options: {
+        host: process.env.MAIL_HOST,
+        port: parseInt(process.env.MAIL_PORT, 10),
+      },
       auth: {
         user: process.env.MAIL_USERNAME,
         pass: process.env.MAIL_PASSWORD,
