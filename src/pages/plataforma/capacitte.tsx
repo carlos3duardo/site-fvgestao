@@ -1,9 +1,12 @@
 import { Box, Flex, chakra, Heading, Text } from '@chakra-ui/react';
-import Head from 'next/head';
 
-import { Container, Header } from '../../components/Layout';
-import Contato from '../../components/Layout/Contato';
-import Footer from '../../components/Layout/Footer';
+import {
+  Head,
+  Header,
+  Footer,
+  Container,
+  Contato,
+} from '../../components/Layout';
 import { Depoimentos } from '../../components/Home';
 import {
   Descricao,
@@ -14,9 +17,10 @@ import {
 export default function Capacitte(): JSX.Element {
   return (
     <>
-      <Head>
-        <title>FV Gestão | Capacitte</title>
-      </Head>
+      <Head
+        title="Capacitte | FV Gestão"
+        description="Integração da cultura que transforma os resultados."
+      />
       <Flex direction="column" width="100%" height="100%" minHeight="100vh">
         <Header />
         <Box flex="1" marginTop="96px">

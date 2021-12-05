@@ -7,18 +7,17 @@ import {
   Heading,
   Text,
 } from '@chakra-ui/react';
-import Head from 'next/head';
 
-import { Container, Header } from '../components/Layout';
-import Contato from '../components/Layout/Contato';
-import Footer from '../components/Layout/Footer';
+import { Head, Header, Footer, Container, Contato } from '../components/Layout';
 
 export default function Levantt(): JSX.Element {
   return (
     <>
-      <Head>
-        <title>FV Gestão | Levantt</title>
-      </Head>
+      <Head
+        title="Programa de Desenvolvimento Empresarial | FV Gestão"
+        description="Conheça a forma que podemos aplicar a nossa mentoria na sua empresa."
+        imageUrl="img/meta-image-desenvolvimento-empresarial.png"
+      />
       <Flex direction="column" width="100%" height="100%" minHeight="100vh">
         <Header />
         <Box flex="1" marginTop="96px">
@@ -55,10 +54,10 @@ export default function Levantt(): JSX.Element {
                 sócios, que por conhecerem o meio empresarial, enxergaram que
                 para um bom trabalho ser feito, é preciso que os líderes de um
                 determinado grupo proporcionem um ambiente harmonioso para os
-                seus colaboradores. Analisando este insight, a FVGestão chegou a
-                algumas conclusões: é preciso medir, acompanhar e capacitar o
-                time que faz a empresa andar, independentemente do estágio em
-                que ela esteja.
+                seus colaboradores. Analisando este insight, a FV Gestão chegou
+                a algumas conclusões: além de medir e acompanhar, é preciso
+                capacitar o time que faz a empresa andar, independentemente do
+                estágio em que ela esteja.
               </Text>
               <Text mb="1.5rem">
                 Baseando-se nos componentes apresentados na figura abaixo, o

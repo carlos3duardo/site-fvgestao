@@ -27,7 +27,8 @@ interface NavItemProps {
   label: string;
   children?: NavItemProps[];
   href?: string;
-  borderded?: boolean;
+  bordered?: boolean;
+  target?: string;
 }
 
 const navItems: Array<NavItemProps> = [
@@ -73,11 +74,43 @@ const navItems: Array<NavItemProps> = [
     label: 'Contato',
     href: '#contato',
   },
+  {
+    label: 'Login',
+    href: '#login',
+    bordered: true,
+    children: [
+      {
+        label: 'Otimizze',
+        href: 'https://otimizze.fvgestao.com.br',
+        target: '_blank',
+      },
+      {
+        label: 'Perfforme',
+        href: 'https://perfforme.fvgestao.com.br',
+        target: '_blank',
+      },
+      {
+        label: 'Capacitte',
+        href: 'https://capacitte.fvgestao.com.br',
+        target: '_blank',
+      },
+      {
+        label: 'Levantt',
+        href: 'https://www.levantt.com.br',
+        target: '_blank',
+      },
+    ],
+  },
+  {
+    label: 'Seja um franqueado',
+    href: '/seja-franqueado',
+    bordered: true,
+  },
 ];
 
 function DesktopNav(): JSX.Element {
   return (
-    <HStack as="ul" listStyleType="none">
+    <HStack as="ul" listStyleType="none" spacing="0">
       {navItems.map(navItem => (
         <chakra.li
           key={navItem.label}
@@ -142,7 +175,7 @@ function DesktopNav(): JSX.Element {
                 variant="ghost"
                 borderWidth="2px"
                 borderRadius="99px"
-                borderColor={navItem.borderded ? 'orange.500' : 'transparent'}
+                borderColor={navItem.bordered ? 'orange.500' : 'transparent'}
                 _hover={{
                   backgroundColor: 'transparent',
                 }}
@@ -390,6 +423,7 @@ export default function Header(): JSX.Element {
           <DesktopNav />
         </Box>
 
+        {/*
         <Box display={{ base: 'none', lg: 'block' }}>
           <Link href="/seja-franqueado" passHref>
             <Button
@@ -404,6 +438,7 @@ export default function Header(): JSX.Element {
             </Button>
           </Link>
         </Box>
+        */}
 
         <MobileNavToggleButton isOpen={isOpen} onClick={onToggle} />
       </Container>

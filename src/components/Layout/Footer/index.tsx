@@ -6,6 +6,7 @@ import {
   FaInstagram,
   FaLinkedin,
   FaMapMarkerAlt,
+  FaPhoneAlt,
   FaYoutube,
 } from 'react-icons/fa';
 import { Container } from '..';
@@ -79,6 +80,14 @@ export default function Footer(): JSX.Element {
             </Flex>
           </chakra.div>
           <chakra.div margin={{ base: '2rem 0 0 0', md: '0' }}>
+            <Flex mt="1rem" alignItems="center">
+              <chakra.figure>
+                <Icon as={FaPhoneAlt} w={8} h={8} color="orange.500" />
+              </chakra.figure>
+              <Text ml="1rem" fontSize="1.25rem" fontWeight="bold">
+                (83) 2107-8949
+              </Text>
+            </Flex>
             <Flex mt="1rem" alignItems="center">
               <chakra.figure>
                 <Icon as={FaEnvelope} w={8} h={8} color="orange.500" />

@@ -1,15 +1,15 @@
 import { Box, Flex, Grid, chakra, Heading, Text } from '@chakra-ui/react';
-import Head from 'next/head';
-import { Container, Header } from '../components/Layout';
+import { Head, Header, Container } from '../components/Layout';
 import Contato from '../components/Layout/Contato';
 import Footer from '../components/Layout/Footer';
 
 export default function QuemSomos(): JSX.Element {
   return (
     <>
-      <Head>
-        <title>FV Gestão | Quem Somos</title>
-      </Head>
+      <Head
+        title="Quem Somos | FV Gestão"
+        description="Conheça mais sobre a nossa empresa e a nossa história"
+      />
       <Flex direction="column" width="100%" height="100%" minHeight="100vh">
         <Header />
         <Box flex="1">
