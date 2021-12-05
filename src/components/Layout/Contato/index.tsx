@@ -11,7 +11,7 @@ import {
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { Container } from '..';
 import { api } from '../../../services/api';
-import { Input, SubmitButton } from '../../FormElements';
+import { Input, MaskedInput, SubmitButton } from '../../FormElements';
 
 interface ContatoProps {
   pagina: string;
@@ -152,11 +152,12 @@ export default function Contato({ pagina }: ContatoProps): JSX.Element {
                   />
                 </GridItem>
                 <GridItem gridColumnEnd={{ base: 'span 12', md: 'span 7' }}>
-                  <Input
+                  <MaskedInput
                     type="text"
                     name="celular"
                     label="Seu celular"
                     isRequired
+                    mask="(99) 99999-9999"
                     {...register('celular')}
                   />
                 </GridItem>
