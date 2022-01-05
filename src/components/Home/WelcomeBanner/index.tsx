@@ -1,16 +1,16 @@
 import { Box, Flex, Heading, chakra } from '@chakra-ui/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Pagination } from 'swiper';
 import { Container } from '../../Layout';
+
+SwiperCore.use([Pagination]);
 
 export default function WelcomeBanner(): JSX.Element {
   return (
-    <Flex
+    <chakra.div
       width="100%"
       height="100vh"
       backgroundColor="background.light"
-      backgroundImage="/img/home-welcome.png"
-      backgroundRepeat="no-repeat"
-      backgroundPosition="center center"
-      backgroundSize="cover"
       position="relative"
     >
       <chakra.div
@@ -18,7 +18,10 @@ export default function WelcomeBanner(): JSX.Element {
         top="0"
         left="0"
         height="100%"
-        width="48%"
+        width={{
+          base: '25%',
+          xl: '48%',
+        }}
         backgroundColor="background.dark"
         _after={{
           content: '""',
@@ -32,85 +35,17 @@ export default function WelcomeBanner(): JSX.Element {
           borderTopColor: `background.dark`,
         }}
       />
-      <Flex
-        direction="row"
-        alignItems="center"
-        position="absolute"
-        width="100%"
-        height="100%"
-        top="0"
-        left="0"
-        overflow="hidden"
-      >
-        <Container position="relative" height="520px">
-          <chakra.img
-            src="/img/fvgestao-logo-icone.svg"
-            width={{ base: '520px', xl: '420px', '2xl': '520px' }}
-            height={{ base: '520px', xl: '420px', '2xl': '520px' }}
-            position="absolute"
-            top="50%"
-            right={{
-              base: '-220px',
-              md: '-160px',
-              lg: '-160px',
-              xl: '0',
-              '2xl': '-160px',
-            }}
-            marginTop={{ base: '-260px', xl: '-210px', '2xl': '-260px' }}
-            opacity="0.3"
-            zIndex="0"
-          />
-        </Container>
-      </Flex>
-
-      <Box
-        position="absolute"
-        width="100%"
-        top="50%"
-        left="50%"
-        transform="translate(-50%, -50%)"
-      >
-        <Container marginTop={{ base: '8rem', md: '0' }}>
-          <Heading
-            as="h1"
-            fontSize={{
-              base: '3.25rem',
-              md: '5.5rem',
-              lg: '7.5rem',
-              xl: '8.5rem',
-            }}
-            zIndex="4"
-          >
-            <chakra.span display="block" lineHeight="1" color="orange.500">
-              Cultura
-            </chakra.span>
-            <chakra.span
-              display="block"
-              lineHeight="1"
-              fontSize={{
-                base: '4.5rem',
-                md: '8rem',
-                lg: '11rem',
-                xl: '13rem',
-              }}
-              color="white"
-              textShadow="0 4px 4px rgba(0, 0, 0, .25)"
-            >
-              Vencedora
-            </chakra.span>
-          </Heading>
-          <Heading
-            as="h3"
-            fontSize="1.75rem"
-            lineHeight="1.2"
-            fontWeight="light"
-            marginLeft={{ base: '0', md: '0.5rem', lg: '1rem' }}
-            color="gray.200"
-          >
-            Que inspira empresários e gestores de todo Brasil.
-          </Heading>
-        </Container>
-      </Box>
-    </Flex>
+      <Swiper pagination>
+        <SwiperSlide>Slide 1</SwiperSlide>
+        <SwiperSlide>Slide 2</SwiperSlide>
+        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>Slide 4</SwiperSlide>
+        <SwiperSlide>Slide 5</SwiperSlide>
+        <SwiperSlide>Slide 6</SwiperSlide>
+        <SwiperSlide>Slide 7</SwiperSlide>
+        <SwiperSlide>Slide 8</SwiperSlide>
+        <SwiperSlide>Slide 9</SwiperSlide>
+      </Swiper>
+    </chakra.div>
   );
 }

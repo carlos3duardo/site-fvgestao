@@ -63,7 +63,7 @@ function Plataforma({
         <Image
           src={iconeUrl}
           alt={nome}
-          width={229}
+          width={240}
           height={160}
           layout="fixed"
         />

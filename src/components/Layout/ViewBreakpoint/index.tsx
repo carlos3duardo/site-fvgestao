@@ -4,7 +4,7 @@ export default function ViewBreakpoint(): JSX.Element {
   const dev = process.env.NODE_ENV === 'development';
 
   return dev ? (
-    <Box position="fixed" bottom="2rem" right="2rem">
+    <Box position="fixed" bottom="2rem" right="2rem" zIndex="999">
       <Button size="sm" colorScheme="primary">
         <chakra.span display={{ base: 'none', sm: 'block', md: 'none' }}>
           sm

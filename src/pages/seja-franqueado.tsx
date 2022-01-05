@@ -8,14 +8,12 @@ import {
   Text,
 } from '@chakra-ui/react';
 import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
 import { MdPlayCircleOutline } from 'react-icons/md';
 
 import { Container, Header } from '../components/Layout';
 import Contato from '../components/Layout/Contato';
 import Footer from '../components/Layout/Footer';
-import ViewBreakpoint from '../components/Layout/ViewBreakpoint';
 import { Depoimentos } from '../components/Home';
 
 export default function SejaFranqueado(): JSX.Element {
@@ -188,11 +186,9 @@ export default function SejaFranqueado(): JSX.Element {
 
         <Depoimentos />
 
-        <Contato />
+        <Contato pagina="Seja um franqueado" />
 
         <Footer />
-
-        <ViewBreakpoint />
       </Flex>
     </>
   );

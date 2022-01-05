@@ -1,0 +1,11 @@
+Algum visitante do site deseja enviar uma mensagem para nós.
+
+Abaixo segue os dados do usuário:
+
+Nome: {nome}
+Empresa: {empresa}
+E-mail: {email}
+Cidade: {municipio} / {uf}
+Celular: {celular}
+
+Página de origem: {pagina}

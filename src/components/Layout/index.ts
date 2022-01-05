@@ -1,4 +1,7 @@
-import Container from './Container';
+import Head from './Head';
 import Header from './Header';
+import Footer from './Footer';
+import Container from './Container';
+import Contato from './Contato';
 
-export { Header, Container };
+export { Head, Header, Footer, Container, Contato };

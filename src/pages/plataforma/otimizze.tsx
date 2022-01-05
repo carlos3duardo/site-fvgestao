@@ -7,12 +7,13 @@ import {
   UnorderedList,
   ListItem,
 } from '@chakra-ui/react';
-import Head from 'next/head';
-
-import { Container, Header } from '../../components/Layout';
-import Contato from '../../components/Layout/Contato';
-import Footer from '../../components/Layout/Footer';
-import ViewBreakpoint from '../../components/Layout/ViewBreakpoint';
+import {
+  Head,
+  Header,
+  Footer,
+  Container,
+  Contato,
+} from '../../components/Layout';
 import { Depoimentos } from '../../components/Home';
 import {
   Descricao,
@@ -23,9 +24,10 @@ import {
 export default function Otimizze(): JSX.Element {
   return (
     <>
-      <Head>
-        <title>FV Gestão | Otimizze</title>
-      </Head>
+      <Head
+        title="Otimizze | FV Gestão"
+        description="Gerencie a rotina de implementação das oportunidades de melhoria da sua gestão."
+      />
       <Flex direction="column" width="100%" height="100%" minHeight="100vh">
         <Header />
         <Box flex="1" marginTop="96px">
@@ -116,9 +118,8 @@ export default function Otimizze(): JSX.Element {
           </Container>
         </Box>
 
-        <Contato />
+        <Contato pagina="Plataforma Otimizze" />
         <Footer />
-        <ViewBreakpoint />
       </Flex>
     </>
   );
