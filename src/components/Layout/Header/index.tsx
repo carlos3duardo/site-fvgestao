@@ -14,7 +14,6 @@ import {
   PopoverContent,
   PopoverBody,
   Stack,
-  Text,
   useDisclosure,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
@@ -41,10 +40,6 @@ const navItems: Array<NavItemProps> = [
     href: '#',
     children: [
       {
-        label: 'Programa de Desenvolvimento Empresarial',
-        href: '/desenvolvimento-empresarial',
-      },
-      {
         label: 'Otimizze',
         href: '/plataforma/otimizze',
       },
@@ -67,8 +62,8 @@ const navItems: Array<NavItemProps> = [
     href: '/#clientes',
   },
   {
-    label: 'Depoimentos',
-    href: '/#depoimentos',
+    label: 'Cases',
+    href: '/cases',
   },
   {
     label: 'Contato',
@@ -101,11 +96,6 @@ const navItems: Array<NavItemProps> = [
       },
     ],
   },
-  {
-    label: 'Seja um franqueado',
-    href: '/seja-franqueado',
-    bordered: true,
-  },
 ];
 
 function DesktopNav(): JSX.Element {
@@ -126,8 +116,9 @@ function DesktopNav(): JSX.Element {
                   as="a"
                   variant="ghost"
                   borderWidth="2px"
-                  borderColor="transparent"
                   borderRadius="99px"
+                  borderColor={navItem.bordered ? 'orange.500' : 'transparent'}
+                  padding="1.2rem 1rem 1rem 1rem"
                   _hover={{
                     backgroundColor: 'transparent',
                   }}
@@ -141,6 +132,7 @@ function DesktopNav(): JSX.Element {
                 marginTop="-4px"
                 borderRadius="0.5rem"
                 boxShadow="0 4px 4px rgba(0, 0, 0, 0.25)"
+                width="200px"
               >
                 <PopoverBody>
                   {navItem.children.map((children, index) => (
@@ -176,6 +168,7 @@ function DesktopNav(): JSX.Element {
                 borderWidth="2px"
                 borderRadius="99px"
                 borderColor={navItem.bordered ? 'orange.500' : 'transparent'}
+                padding="1.2rem 1rem 1rem 1rem"
                 _hover={{
                   backgroundColor: 'transparent',
                 }}
