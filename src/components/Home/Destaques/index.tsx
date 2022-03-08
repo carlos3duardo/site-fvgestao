@@ -81,8 +81,8 @@ function BannerCulturaVencedora(): JSX.Element {
 
       <chakra.img
         src="/img/fvgestao-logo-icone.svg"
-        width={{ base: '560px', xl: '480px', '2xl': '520px' }}
-        height={{ base: '560px', xl: '480px', '2xl': '520px' }}
+        width={{ base: '560px', xl: '420px', '2xl': '520px' }}
+        height={{ base: '560px', xl: '420px', '2xl': '520px' }}
         position="absolute"
         top="50%"
         right={{
@@ -92,15 +92,15 @@ function BannerCulturaVencedora(): JSX.Element {
           xl: '-160px',
           '2xl': '-160px',
         }}
-        marginTop={{ base: '-280px', xl: '-240px', '2xl': '-260px' }}
+        marginTop={{ base: '-280px', xl: '-240px', '2xl': '-210px' }}
         opacity="0.3"
         zIndex="1"
       />
 
       <chakra.img
         src="/img/home-banner-bg-cultura-vencedora.png"
-        width={{ base: '360px', xl: '360px', '2xl': '410px' }}
-        height={{ base: '650px', xl: '650px', '2xl': '740px' }}
+        width={{ base: '360px', xl: '310px', '2xl': '410px' }}
+        height={{ base: '650px', xl: '560px', '2xl': '740px' }}
         position="absolute"
         top="50%"
         right={{
@@ -110,7 +110,7 @@ function BannerCulturaVencedora(): JSX.Element {
           xl: '60px',
           '2xl': '120px',
         }}
-        marginTop={{ base: '-325px', xl: '-325px', '2xl': '-370px' }}
+        marginTop={{ base: '-325px', xl: '-280px', '2xl': '-370px' }}
         zIndex="0"
       />
     </Container>
