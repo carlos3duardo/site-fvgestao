@@ -123,7 +123,7 @@ export default function Plataformas(): JSX.Element {
           <Plataforma
             nome="Otimizze"
             iconeUrl="/img/plataformas/otimizze-logo.png"
-            descricao="Aqui você identifica o grau de profissionalismo gerencial do seu negócio através de planos operacionais, criando musculatura para solidificar o seu negócio."
+            descricao="Avalia os pontos de melhorias, cria planos de ação e gerencia tudo no ambiente da plataforma."
             href="/plataforma/otimizze"
           />
 
@@ -132,7 +132,7 @@ export default function Plataformas(): JSX.Element {
           <Plataforma
             nome="Perfforme"
             iconeUrl="/img/plataformas/perfforme-logo.png"
-            descricao="Capacite os seus colaboradores para o desempenho total de suas capacidades técnicas vocacionais, competências e saberes."
+            descricao="Avalia os seus colaboradores, dá feedbacks para os mesmos e constrói o plano de desenvolvimento individual."
             href="/plataforma/perfforme"
             reverse
           />
@@ -142,7 +142,7 @@ export default function Plataformas(): JSX.Element {
           <Plataforma
             nome="Capacitte"
             iconeUrl="/img/plataformas/capacitte-logo.png"
-            descricao="Um centro de excelência impulsionando a cultura de um aprendizado dirigido ao desenvolvimento e crescimento sustentável da empresa."
+            descricao="Cria a universidade corporativa da organização construindo um ambiente de aprendizado a partir de um conteúdo específico para o desenvolvimento dos colaboradores."
             href="/plataforma/capacitte"
           />
 
@@ -151,7 +151,7 @@ export default function Plataformas(): JSX.Element {
           <Plataforma
             nome="Levantt"
             iconeUrl="/img/plataformas/levantt-logo.png"
-            descricao="Acompanhamento o grau de satisfação e fidelidade dos clientes, objetivando o sucesso na relação de serviços e produtos ofertados."
+            descricao="Acompanha e mede o grau de satisfação em tempo real para desenvolver um plano de lealdade para os seus clientes."
             href="/plataforma/levantt"
             reverse
           />

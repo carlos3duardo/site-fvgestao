@@ -85,7 +85,7 @@ export default function Footer(): JSX.Element {
                 <Icon as={FaPhoneAlt} w={8} h={8} color="orange.500" />
               </chakra.figure>
               <Text ml="1rem" fontSize="1.25rem" fontWeight="bold">
-                (83) 2107-8949
+                2107-8949
               </Text>
             </Flex>
             <Flex mt="1rem" alignItems="center">
@@ -111,7 +111,8 @@ export default function Footer(): JSX.Element {
             alignItems="center"
           >
             <Text marginBottom={{ base: '1rem', md: '0' }}>
-              2021 &copy; FV Gestão. Todos os direitos reservados.
+              {new Date().getFullYear()} &copy; FV Gestão. Todos os direitos
+              reservados.
             </Text>
             <chakra.figure>
               <Image

@@ -18,14 +18,14 @@ export default function Perfforme(): JSX.Element {
     <>
       <Head
         title="Perfforme | FV Gestão"
-        description="Integração da cultura que transforma os resultados."
+        description="Avalia os seus colaboradores, dá feedbacks para os mesmos e constrói o plano de desenvolvimento individual."
       />
       <Flex direction="column" width="100%" height="100%" minHeight="100vh">
         <Header />
         <Box flex="1" marginTop="96px">
           <VideoApresentacao
             appNome="Perfforme"
-            appTexto="Integração da cultura que transforma os resultados."
+            appTexto="Avalia os seus colaboradores, dá feedbacks para os mesmos e constrói o plano de desenvolvimento individual."
             appLogoUrl="/img/plataformas/perfforme-logo.png"
             videoCapaUrl="/img/plataformas/perfforme-capa-video.jpg"
             videoUrl="https://www.youtube.com/embed/_mGPK2lAHos"
