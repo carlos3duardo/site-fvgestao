@@ -52,7 +52,7 @@ export default function BannerCulturaVencedora(): JSX.Element {
           marginLeft={{ base: '0', md: '0.5rem', lg: '1rem' }}
           color="gray.200"
         >
-          Que inspira empresários e gestores de todo Brasil.
+          Que inspira empresários e gestores.
         </Heading>
       </Box>
 
