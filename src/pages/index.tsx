@@ -40,11 +40,13 @@ export default function Home(): JSX.Element {
             <Clientes />
           </chakra.div>
 
+          {/*
           <chakra.div id="depoimentos">
             <Depoimentos />
           </chakra.div>
+          */}
 
-          <SejaFranqueado />
+          {/* <SejaFranqueado /> */}
         </Box>
         <Contato pagina="Principal" />
         <Footer />

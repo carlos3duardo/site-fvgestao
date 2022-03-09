@@ -45,9 +45,6 @@ export default function Clientes(): JSX.Element {
         >
           Clientes
         </Heading>
-        <Heading as="h3" textAlign="center" fontSize="xl" fontWeight="regular">
-          Empresas que confiam na FV Gestão
-        </Heading>
 
         <Box mt="2rem">
           <Swiper
@@ -101,8 +98,24 @@ export default function Clientes(): JSX.Element {
                 justifyContent="center"
               >
                 <Image
-                  src="/img/clientes/cliente-ppq.png"
-                  alt="Programa Paraibano da Qualidade"
+                  src="/img/clientes/cliente-abracinov.png"
+                  alt="Associação Brasileira para Competitividade e Inovação"
+                  layout="fill"
+                  objectFit="scale-down"
+                />
+              </chakra.figure>
+            </SwiperSlide>
+            <SwiperSlide>
+              <chakra.figure
+                height="160px"
+                display="flex"
+                flexDirection="row"
+                alignItems="center"
+                justifyContent="center"
+              >
+                <Image
+                  src="/img/clientes/cliente-9ideia.png"
+                  alt="9ideia Brasil"
                   layout="fill"
                   objectFit="scale-down"
                 />

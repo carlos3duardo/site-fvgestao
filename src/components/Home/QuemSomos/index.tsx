@@ -43,22 +43,20 @@ export default function QuemSomos(): JSX.Element {
               transition="all 0.2s ease"
               align="center"
               justify="center"
-              _hover={{
-                backgroundColor: 'rgba(254, 140, 0, 0.2)',
-              }}
-            >
-              <Icon as={MdPlayCircleOutline} w="4rem" h="4rem" color="white" />
-            </Flex>
+            />
           </chakra.figure>
           <chakra.div flex="1" textColor="primary.800">
             <Heading as="h2" mb="1rem">
               Quem somos
             </Heading>
             <Text fontSize="1.5rem" mb="1rem">
-              A FVGestão é uma plataforma de soluções empresariais a partir da
-              inovação das práticas coorporativas tendo como base a educação, a
-              tecnologia e a cultura gerencial voltadas para o êxito nos
-              resultados do seu negócio.
+              A FV Gestão é uma plataforma de soluções empresariais que possui
+              um método exclusivo para inovação das práticas corporativas tendo
+              como base a educação, a tecnologia e a cultura gerencial voltadas
+              para o êxito nos resultados do seu negócio.
+            </Text>
+            <Text fontSize="1.5rem" mb="1rem">
+              E como a gente consegue fazer isso?
             </Text>
             <Link href="/quem-somos" passHref>
               <Button
