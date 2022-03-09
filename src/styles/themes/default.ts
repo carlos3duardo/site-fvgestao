@@ -11,6 +11,12 @@ const theme = {
       body: {
         backgroundColor: 'background.light',
       },
+      a: {
+        color: '#ff9d24',
+        _hover: {
+          color: '#b66400',
+        },
+      },
     },
   },
   fonts: {

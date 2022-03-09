@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { chakra, Flex, HStack, Icon, Text } from '@chakra-ui/react';
 import {
   FaEnvelope,
@@ -85,7 +86,7 @@ export default function Footer(): JSX.Element {
                 <Icon as={FaPhoneAlt} w={8} h={8} color="orange.500" />
               </chakra.figure>
               <Text ml="1rem" fontSize="1.25rem" fontWeight="bold">
-                2107-8949
+                (83) 2107-8949
               </Text>
             </Flex>
             <Flex mt="1rem" alignItems="center">
@@ -110,10 +111,29 @@ export default function Footer(): JSX.Element {
             justifyContent="space-between"
             alignItems="center"
           >
-            <Text marginBottom={{ base: '1rem', md: '0' }}>
-              {new Date().getFullYear()} &copy; FV Gestão. Todos os direitos
-              reservados.
-            </Text>
+            <chakra.div marginBottom={{ base: '1rem', md: '0' }}>
+              <Text>
+                {new Date().getFullYear()} &copy; FV Gestão. Todos os direitos
+                reservados.
+              </Text>
+              <Link href="/termos-de-uso" passHref>
+                <chakra.a color="orange.200" _hover={{ color: 'orange.600' }}>
+                  Termos de uso
+                </chakra.a>
+              </Link>
+              &nbsp;&nbsp;|&nbsp;&nbsp;
+              <Link href="/aviso-de-privacidade" passHref>
+                <chakra.a color="orange.200" _hover={{ color: 'orange.600' }}>
+                  Aviso de privacidade
+                </chakra.a>
+              </Link>
+              &nbsp;&nbsp;|&nbsp;&nbsp;
+              <Link href="/politica-de-cookies" passHref>
+                <chakra.a color="orange.200" _hover={{ color: 'orange.600' }}>
+                  Política de cookies
+                </chakra.a>
+              </Link>
+            </chakra.div>
             <chakra.figure>
               <Image
                 src="/img/fvgestao-logo-footer.svg"
