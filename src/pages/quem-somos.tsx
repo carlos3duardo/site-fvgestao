@@ -76,7 +76,7 @@ export default function QuemSomos(): JSX.Element {
                     Missão
                   </Heading>
                   <Text fontSize="1.25rem" textAlign="center">
-                    Aprimorar a gestão com o uso de tecnologias e educação
+                    Aprimorar a gestão usando tecnologias e educação
                     corporativa.
                   </Text>
                 </chakra.div>
@@ -90,7 +90,7 @@ export default function QuemSomos(): JSX.Element {
                     Valores
                   </Heading>
                   <Text fontSize="1.25rem" textAlign="center">
-                    X
+                    Confiança, Inovação, Adaptabilidade, Aprendizado e Sinergia.
                   </Text>
                 </chakra.div>
               </Grid>
