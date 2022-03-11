@@ -2,7 +2,7 @@ import { Box, Heading, chakra } from '@chakra-ui/react';
 
 import { Container } from '../../Layout';
 
-export default function BannerCulturaVencedora(): JSX.Element {
+export default function BannerCulturaVencedoraV1(): JSX.Element {
   return (
     <Container
       className="container"
