@@ -5,7 +5,7 @@ import SwiperCore, { Pagination } from 'swiper';
 
 import styles from './styles.module.scss';
 
-import BannerCulturaVencedora from './BannerCulturaVencedora';
+import BannerCulturaVencedoraV2 from './BannerCulturaVencedoraV2';
 
 SwiperCore.use([Pagination]);
 
@@ -13,13 +13,13 @@ export default function Destaques(): JSX.Element {
   const [destaques, setDestaques] = useState([]);
 
   useEffect(() => {
-    setDestaques([BannerCulturaVencedora]);
+    setDestaques([BannerCulturaVencedoraV2]);
   }, []);
 
   return (
     <chakra.div
       width="100%"
-      height="100vh"
+      // height="100vh"
       backgroundColor="background.light"
       position="relative"
     >
