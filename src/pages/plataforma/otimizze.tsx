@@ -87,7 +87,7 @@ export default function Otimizze(): JSX.Element {
           </Container>
         </Box>
 
-        <Depoimentos />
+        {/* <Depoimentos /> */}
 
         <Box padding="5rem 0" bgColor="#e5e5e5" color="primary.800">
           <Container maxWidth="920px">
