@@ -21,6 +21,7 @@ export default function Clientes(): JSX.Element {
       position="relative"
       _before={{
         content: '""',
+        display: 'none',
         width: {
           base: '80%',
           xl: '600px',

@@ -6,6 +6,7 @@ import SwiperCore, { Pagination } from 'swiper';
 import styles from './styles.module.scss';
 
 import BannerCulturaVencedoraV2 from './BannerCulturaVencedoraV2';
+import CursoRH40 from './CursoRH40';
 
 SwiperCore.use([Pagination]);
 
@@ -13,7 +14,7 @@ export default function Destaques(): JSX.Element {
   const [destaques, setDestaques] = useState([]);
 
   useEffect(() => {
-    setDestaques([BannerCulturaVencedoraV2]);
+    setDestaques([CursoRH40, BannerCulturaVencedoraV2]);
   }, []);
 
   return (
