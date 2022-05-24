@@ -121,14 +121,14 @@ export default function Plataformas(): JSX.Element {
       <VStack spacing={{ base: '2rem', md: '0' }}>
         <Plataforma
           nome="Otimizze"
-          descricao="Avalia os pontos de melhorias, cria planos de ação e gerencia tudo no ambiente da plataforma."
+          descricao="Faça um auto-diagnóstico de sua empresa, avalie os pontos de melhoria, crie planos de ação e gerencie tudo no ambiente da plataforma."
           iconeUrl="/img/plataformas/otimizze-logo.png"
           imagemUrl="/img/plataformas/otimizze-telas.png"
           href="/plataforma/otimizze"
         />
         <Plataforma
           nome="Perfforme"
-          descricao="Avalia os seus colaboradores, dá feedbacks para os mesmos e constrói o plano de desenvolvimento individual."
+          descricao="Avalie sua equipe, realize feedbacks com seus colaboradores e construa seus planos de desenvolvimento individual."
           iconeUrl="/img/plataformas/perfforme-logo.png"
           imagemUrl="/img/plataformas/perfforme-telas.png"
           href="/plataforma/perfforme"
@@ -136,14 +136,14 @@ export default function Plataformas(): JSX.Element {
         />
         <Plataforma
           nome="Capacitte"
-          descricao="Cria a universidade corporativa da organização construindo um ambiente de aprendizado a partir de um conteúdo específico para o desenvolvimento dos colaboradores."
+          descricao="Crie uma universidade corporativa para sua organização, construindo um ambiente de aprendizado a partir de conteúdos específicos para o desenvolvimento de seus colaboradores."
           iconeUrl="/img/plataformas/capacitte-logo.png"
           imagemUrl="/img/plataformas/capacitte-telas.png"
           href="/plataforma/capacitte"
         />
         <Plataforma
           nome="Levantt"
-          descricao="Acompanha e mede o grau de satisfação em tempo real para desenvolver um plano de lealdade para os seus clientes."
+          descricao="Meça e acompanhe o grau de satisfação em tempo real do seu atendimento, para desenvolver um plano de lealdade para os seus clientes."
           iconeUrl="/img/plataformas/levantt-logo.png"
           imagemUrl="/img/plataformas/levantt-telas.png"
           href="/plataforma/levantt"

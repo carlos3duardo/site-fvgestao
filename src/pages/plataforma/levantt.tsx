@@ -18,14 +18,14 @@ export default function Levantt(): JSX.Element {
     <>
       <Head
         title="Levantt | FV Gestão"
-        description="Acompanha e mede o grau de satisfação em tempo real para desenvolver um plano de lealdade para os seus clientes."
+        description="Meça e acompanhe o grau de satisfação em tempo real do seu atendimento, para desenvolver um plano de lealdade para os seus clientes."
       />
       <Flex direction="column" width="100%" height="100%" minHeight="100vh">
         <Header />
         <Box flex="1">
           <VideoApresentacao
             appNome="Levantt"
-            appTexto="Acompanha e mede o grau de satisfação em tempo real para desenvolver um plano de lealdade para os seus clientes."
+            appTexto="Meça e acompanhe o grau de satisfação em tempo real do seu atendimento, para desenvolver um plano de lealdade para os seus clientes."
             appLogoUrl="/img/plataformas/levantt-logo.png"
             videoCapaUrl="/img/plataformas/levantt-capa-video.jpg"
             videoUrl="https://www.youtube.com/embed/gFQbqeLxh8M"
