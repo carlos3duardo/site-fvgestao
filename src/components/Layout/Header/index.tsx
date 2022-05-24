@@ -389,6 +389,7 @@ export default function Header(): JSX.Element {
   return (
     <chakra.header
       position="fixed"
+      top="0"
       zIndex="99"
       width="100%"
       bgColor="background.light"

@@ -17,24 +17,20 @@ export default function Head({
 
       {/* Primary Meta Tags */}
 
-      <meta key="title" name="title" content={title} />
-      <meta key="description" name="description" content={description} />
+      <meta name="title" content={title} />
+      <meta name="description" content={description} />
 
       {/* Open Graph / Facebook */}
 
-      <meta key="facebook-title" property="og:title" content={title} />
+      <meta property="og:type" content="website" />
       <meta
-        key="facebook-description"
-        property="og:description"
-        content={description}
-      />
-      <meta
-        key="facebook-url"
         property="og:url"
         content={typeof window !== 'undefined' ? window.location.href : ''}
       />
+      <meta property="og:title" content={title} />
+
+      <meta property="og:description" content={description} />
       <meta
-        key="facebook-image"
         property="og:image"
         content={
           typeof window !== 'undefined'
@@ -42,34 +38,23 @@ export default function Head({
             : ''
         }
       />
-      <meta key="type" property="og:type" content="website" />
 
       {/* Twitter */}
 
-      <meta key="twitter-title" property="twitter:title" content={title} />
+      <meta property="twitter:card" content="summary_large_image" />
       <meta
-        key="twitter-description"
-        property="twitter:description"
-        content={description}
-      />
-      <meta
-        key="twitter-url"
         property="twitter:url"
-        content={typeof window !== 'undefined' ? window?.location.href : ''}
+        content={typeof window !== 'undefined' ? window.location.href : ''}
       />
+      <meta property="twitter:title" content={title} />
+      <meta property="twitter:description" content={description} />
       <meta
-        key="twitter-image"
         property="twitter:image"
         content={
           typeof window !== 'undefined'
             ? `${window?.location.origin}${imageUrl}`
             : ''
         }
-      />
-      <meta
-        key="twitter-card"
-        property="twitter:card"
-        content="summary_large_image"
       />
     </NextHead>
   );

@@ -23,7 +23,7 @@ export default function Capacitte(): JSX.Element {
       />
       <Flex direction="column" width="100%" height="100%" minHeight="100vh">
         <Header />
-        <Box flex="1" marginTop="96px">
+        <Box flex="1">
           <VideoApresentacao
             appNome="Capacitte"
             appTexto="Cria a universidade corporativa da organização construindo um ambiente de aprendizado a partir de um conteúdo específico para o desenvolvimento dos colaboradores."

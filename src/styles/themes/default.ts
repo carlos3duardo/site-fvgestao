@@ -10,6 +10,7 @@ const theme = {
       },
       body: {
         backgroundColor: 'background.light',
+        paddingTop: '6rem',
       },
       a: {
         color: '#ff9d24',

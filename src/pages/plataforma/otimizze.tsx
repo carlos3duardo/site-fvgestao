@@ -30,7 +30,7 @@ export default function Otimizze(): JSX.Element {
       />
       <Flex direction="column" width="100%" height="100%" minHeight="100vh">
         <Header />
-        <Box flex="1" marginTop="96px">
+        <Box flex="1">
           <VideoApresentacao
             appNome="Otimizze"
             appTexto="Avalia os pontos de melhorias, cria planos de ação e gerencia tudo no ambiente da plataforma."
