@@ -26,14 +26,14 @@ export default function Otimizze(): JSX.Element {
     <>
       <Head
         title="Otimizze | FV Gestão"
-        description="Avalia os pontos de melhorias, cria planos de ação e gerencia tudo no ambiente da plataforma."
+        description="Faça um auto-diagnóstico de sua empresa, avalie os pontos de melhoria, crie planos de ação e gerencie tudo no ambiente da plataforma."
       />
       <Flex direction="column" width="100%" height="100%" minHeight="100vh">
         <Header />
         <Box flex="1">
           <VideoApresentacao
             appNome="Otimizze"
-            appTexto="Avalia os pontos de melhorias, cria planos de ação e gerencia tudo no ambiente da plataforma."
+            appTexto="Faça um auto-diagnóstico de sua empresa, avalie os pontos de melhoria, crie planos de ação e gerencie tudo no ambiente da plataforma."
             appLogoUrl="/img/plataformas/otimizze-logo.png"
             videoCapaUrl="/img/plataformas/otimizze-capa-video.jpg"
             videoUrl="https://www.youtube.com/embed/3MmG2AlAbZk"

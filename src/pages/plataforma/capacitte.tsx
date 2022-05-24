@@ -19,14 +19,14 @@ export default function Capacitte(): JSX.Element {
     <>
       <Head
         title="Capacitte | FV Gestão"
-        description="Cria a universidade corporativa da organização construindo um ambiente de aprendizado a partir de um conteúdo específico para o desenvolvimento dos colaboradores."
+        description="Crie uma universidade corporativa para sua organização, construindo um ambiente de aprendizado a partir de conteúdos específicos para o desenvolvimento de seus colaboradores."
       />
       <Flex direction="column" width="100%" height="100%" minHeight="100vh">
         <Header />
         <Box flex="1">
           <VideoApresentacao
             appNome="Capacitte"
-            appTexto="Cria a universidade corporativa da organização construindo um ambiente de aprendizado a partir de um conteúdo específico para o desenvolvimento dos colaboradores."
+            appTexto="Crie uma universidade corporativa para sua organização, construindo um ambiente de aprendizado a partir de conteúdos específicos para o desenvolvimento de seus colaboradores."
             appLogoUrl="/img/plataformas/capacitte-logo.png"
             videoCapaUrl="/img/plataformas/capacitte-capa-video.jpg"
             videoUrl="https://www.youtube.com/embed/gFQbqeLxh8M"

@@ -63,7 +63,7 @@ export default function VideoApresentacao({
                   layout="fixed"
                 />
               </chakra.figure>
-              <Text fontSize="1.5rem" m="1rem 0">
+              <Text fontSize="1.5rem" m="1rem 1rem 1rem 0">
                 {appTexto}
               </Text>
             </chakra.div>
