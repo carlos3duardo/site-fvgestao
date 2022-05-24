@@ -19,7 +19,7 @@ export default function CursoRH40(): JSX.Element {
         width="100%"
       >
         <chakra.img
-          src="/img/home-destaques/curso-rh-4.0.jpg"
+          src="/img/home-destaques/curso-rh-4.0-1440x570.jpg"
           width={{ base: '100%' }}
         />
       </chakra.a>

@@ -13,7 +13,7 @@ export default function BannerCulturaVencedoraV2(): JSX.Element {
       maxWidth="100%"
     >
       <chakra.img
-        src="/img/home-destaques/cultura-vencedora.jpg"
+        src="/img/home-destaques/cultura-vencedora-1440x570.jpg"
         width={{ base: '100%' }}
       />
     </Container>
