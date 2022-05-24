@@ -15,14 +15,14 @@ export default function QuemSomos(): JSX.Element {
         <Box flex="1">
           <chakra.figure
             width="100%"
-            height={{ base: '500px', md: '535px', xl: '680px' }}
+            height={{ base: '380px', md: '360px', lg: '360px', xl: '420px' }}
             backgroundImage="url(/img/pagina-quem-somos.png)"
             backgroundRepeat="no-repeat"
             backgroundPosition="center center"
             backgroundSize="cover"
           />
 
-          <chakra.div backgroundColor="#E5E5E5" padding="80px 0">
+          <chakra.div backgroundColor="#E5E5E5" padding="4rem 0">
             <Container maxWidth="920px">
               <Heading as="h1" textAlign="center" textTransform="uppercase">
                 Sobre nós
