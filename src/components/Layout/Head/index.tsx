@@ -69,7 +69,11 @@ export default function Head({
       <meta
         key="twitter-card"
         property="twitter:card"
-        content="summary_large_image"
+        content={
+          typeof window !== 'undefined'
+            ? `${window?.location.origin}${imageUrl}`
+            : ''
+        }
       />
     </NextHead>
   );
