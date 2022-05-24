@@ -1,17 +1,45 @@
 import { useState, useEffect } from 'react';
 import { chakra } from '@chakra-ui/react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Pagination } from 'swiper';
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
+import { Navigation, Pagination } from 'swiper';
 
 import styles from './styles.module.scss';
 
 import BannerCulturaVencedoraV2 from './BannerCulturaVencedoraV2';
 import CursoRH40 from './CursoRH40';
 
-SwiperCore.use([Pagination]);
+// SwiperCore.use([Pagination, Navigation]);
+
+function SlidePrevButton() {
+  const swiper = useSwiper();
+
+  return (
+    <chakra.div
+      className={styles.swiperButtonPrev}
+      onClick={() => swiper.slidePrev()}
+    >
+      <BsChevronLeft />
+    </chakra.div>
+  );
+}
+
+function SlideNextButton() {
+  const swiper = useSwiper();
+
+  return (
+    <chakra.div
+      className={styles.swiperButtonNext}
+      onClick={() => swiper.slideNext()}
+    >
+      <BsChevronRight />
+    </chakra.div>
+  );
+}
 
 export default function Destaques(): JSX.Element {
   const [destaques, setDestaques] = useState([]);
+  const swiper = useSwiper();
 
   useEffect(() => {
     setDestaques([CursoRH40, BannerCulturaVencedoraV2]);
@@ -20,7 +48,6 @@ export default function Destaques(): JSX.Element {
   return (
     <chakra.div
       width="100%"
-      // height="100vh"
       backgroundColor="background.light"
       position="relative"
     >
@@ -46,19 +73,23 @@ export default function Destaques(): JSX.Element {
           borderTopColor: `background.dark`,
         }}
       />
-
       <Swiper
         className={styles.swiper}
+        navigation={{
+          prevEl: `${styles.swiperButtonPrev}`,
+          nextEl: `${styles.swiperButtonNext}`,
+        }}
+        modules={[Pagination, Navigation]}
         pagination={{
           clickable: true,
           bulletClass: `${styles.swiperPaginationBullet}`,
           bulletActiveClass: `${styles.swiperPaginationBulletActive}`,
         }}
         loop={destaques.length > 1}
-        autoplay={{
-          delay: 5000,
-        }}
+        autoplay={{ delay: 5000 }}
       >
+        <SlidePrevButton />
+        <SlideNextButton />
         {destaques.map(banner => (
           <SwiperSlide className={styles.swiperSlide}>{banner}</SwiperSlide>
         ))}

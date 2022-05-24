@@ -30,3 +30,36 @@ $xl: 80em;
   background-color: #fe8c00;
   opacity: 1;
 }
+
+.swiperButtonPrev, .swiperButtonNext {
+  color: #fe8c00;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s ease all;
+  border: 2px solid transparent;
+  margin-top: -2rem;
+  font-size: 2.5rem;
+  &:hover {
+    border: 2px solid #fe8c00;
+    cursor: pointer;
+  }
+}
+
+.swiperButtonPrev {
+  left: .5rem;
+  right: auto;
+  padding-right: 0.1rem;
+}
+
+.swiperButtonNext {
+  right: .5rem;
+  left: auto;
+  padding-left: 0.1rem;
+}
