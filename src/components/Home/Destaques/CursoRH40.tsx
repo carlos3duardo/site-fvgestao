@@ -13,7 +13,7 @@ export default function CursoRH40(): JSX.Element {
       maxWidth="100%"
     >
       <chakra.a
-        href="http://dsconsultoresassociados.com.br/produto/rh-estrategico/"
+        href="https://forms.gle/be1mgtunfyAgmJjS6"
         target="_blank"
         display="block"
         width="100%"
