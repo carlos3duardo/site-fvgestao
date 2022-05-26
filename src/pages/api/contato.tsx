@@ -42,7 +42,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
     await transport.sendMail({
       from: `Site FV Gestão <${process.env.MAIL_SENDER}>`,
-      to: 'contato@fvgestao.com.br',
+      to: process.env.MAIL_TO || 'contato@fvgestao.com.br',
       subject: 'FV Gestão - Mensagem do site',
       text: msgText,
       html: msgHtml,
