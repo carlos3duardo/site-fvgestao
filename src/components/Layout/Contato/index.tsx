@@ -31,9 +31,7 @@ export default function Contato({ pagina }: ContatoProps): JSX.Element {
   const { register, handleSubmit, formState } = useForm();
 
   const onSubmit: SubmitHandler<FormProps> = async data => {
-    const response = await api.post('/contato', data);
-
-    console.log(response.status, response.data);
+    api.post('/contato', data);
   };
 
   return (
