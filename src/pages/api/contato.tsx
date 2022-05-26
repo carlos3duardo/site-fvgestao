@@ -10,7 +10,10 @@ import { fauna } from '../../services/faunadb';
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
-    const filePath = path.resolve('resources', 'layouts', 'email-contato');
+    const filePath =
+      process.env.NODE_ENV === 'production'
+        ? path.resolve('layouts', 'email-contato')
+        : path.resolve('public', 'layouts', 'email-contato');
 
     let msgHtml = fs.readFileSync(`${filePath}.html`, 'utf8');
     let msgText = fs.readFileSync(`${filePath}.txt`, 'utf8');
