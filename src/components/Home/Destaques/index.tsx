@@ -9,8 +9,6 @@ import styles from './styles.module.scss';
 import BannerCulturaVencedoraV2 from './BannerCulturaVencedoraV2';
 import CursoRH40 from './CursoRH40';
 
-// SwiperCore.use([Pagination, Navigation]);
-
 function SlidePrevButton() {
   const swiper = useSwiper();
 
@@ -39,7 +37,6 @@ function SlideNextButton() {
 
 export default function Destaques(): JSX.Element {
   const [destaques, setDestaques] = useState([]);
-  const swiper = useSwiper();
 
   useEffect(() => {
     setDestaques([CursoRH40, BannerCulturaVencedoraV2]);
@@ -90,8 +87,10 @@ export default function Destaques(): JSX.Element {
       >
         <SlidePrevButton />
         <SlideNextButton />
-        {destaques.map(banner => (
-          <SwiperSlide className={styles.swiperSlide}>{banner}</SwiperSlide>
+        {destaques.map((banner, index) => (
+          <SwiperSlide key={index} className={styles.swiperSlide}>
+            {banner}
+          </SwiperSlide>
         ))}
       </Swiper>
     </chakra.div>

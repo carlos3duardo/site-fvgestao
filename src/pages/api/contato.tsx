@@ -32,10 +32,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     msgText = msgText.replace('{pagina}', req.body.pagina);
 
     const transport = nodemailer.createTransport({
-      options: {
-        host: process.env.MAIL_HOST,
-        port: parseInt(process.env.MAIL_PORT, 10),
-      },
+      host: process.env.MAIL_HOST,
+      port: process.env.MAIL_PORT,
       auth: {
         user: process.env.MAIL_USERNAME,
         pass: process.env.MAIL_PASSWORD,
@@ -43,29 +41,29 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     });
 
     await transport.sendMail({
-      from: '"Site FV Gestão" <contato@fvgestao.com.br>',
+      from: `Site FV Gestão <${process.env.MAIL_SENDER}>`,
       to: 'contato@fvgestao.com.br',
       subject: 'FV Gestão - Mensagem do site',
       text: msgText,
       html: msgHtml,
     });
 
-    await fauna.query(
-      q.Create(q.Collection('mensagens'), {
-        data: {
-          pagina: req.body.pagina,
-          nome: req.body.nome.toUpperCase(),
-          empresa: req.body.empresa.toUpperCase(),
-          email: req.body.email.toLowerCase(),
-          municipio: req.body.municipio.toUpperCase(),
-          uf: req.body.uf.toUpperCase(),
-          celular: req.body.celular,
-          createdAt: format(new Date(), 'yyyy-MM-dd HH:mm:ss', {
-            locale: ptBR,
-          }),
-        },
-      }),
-    );
+    // await fauna.query(
+    //   q.Create(q.Collection('mensagens'), {
+    //     data: {
+    //       pagina: req.body.pagina,
+    //       nome: req.body.nome.toUpperCase(),
+    //       empresa: req.body.empresa.toUpperCase(),
+    //       email: req.body.email.toLowerCase(),
+    //       municipio: req.body.municipio.toUpperCase(),
+    //       uf: req.body.uf.toUpperCase(),
+    //       celular: req.body.celular,
+    //       createdAt: format(new Date(), 'yyyy-MM-dd HH:mm:ss', {
+    //         locale: ptBR,
+    //       }),
+    //     },
+    //   }),
+    // );
 
     return res.status(200).json(req.body);
   } catch (err) {
