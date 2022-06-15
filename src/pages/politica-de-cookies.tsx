@@ -17,7 +17,7 @@ export default function PoliticaDeCookies(): JSX.Element {
       <Head title="Política de Cookies | FV Gestão" />
       <Flex direction="column" width="100%" height="100%" minHeight="100vh">
         <Header />
-        <Box flex="1" marginTop="6rem">
+        <Box flex="1">
           <chakra.div backgroundColor="#E5E5E5" padding="80px 0">
             <Container maxWidth="920px" fontSize="1.5rem" textAlign="justify">
               <Heading as="h1" textAlign="center" textTransform="uppercase">
