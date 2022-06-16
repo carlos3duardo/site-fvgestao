@@ -1,4 +1,5 @@
 import { Box, Flex, Grid, chakra, Heading, Text } from '@chakra-ui/react';
+import Link from 'next/link';
 import { Head, Header, Container } from '../components/Layout';
 import Contato from '../components/Layout/Contato';
 import Footer from '../components/Layout/Footer';
@@ -41,11 +42,24 @@ export default function QuemSomos(): JSX.Element {
               </Text>
               <Text fontSize="1.5rem" textAlign="justify" marginTop="2rem">
                 Unindo conceitos de tecnologia e gestão, com foco em inovação e
-                resultados, nosso método tem por base quatro plataformas:
-                Sistema de Avaliação Gerencial, DHO – Desenvolvimento Humano
-                Organizacional, Universidade Corporativa e Levantt. Todos eles
-                fazem parte dos programas de desenvolvimento gerencial de
-                inúmeros grupos empresariais brasileiros.
+                resultados, nosso método tem por base quatro plataformas:{' '}
+                <Link href="/plataforma/otimizze" passHref>
+                  <chakra.a>Otimizze</chakra.a>
+                </Link>
+                ,{' '}
+                <Link href="/plataforma/perfforme" passHref>
+                  <chakra.a>Perfforme</chakra.a>
+                </Link>
+                ,{' '}
+                <Link href="/plataforma/capacitte" passHref>
+                  <chakra.a>Capacitte</chakra.a>
+                </Link>{' '}
+                e{' '}
+                <Link href="/plataforma/levantt" passHref>
+                  <chakra.a>Levantt</chakra.a>
+                </Link>
+                . Todos eles fazem parte dos programas de desenvolvimento
+                gerencial de inúmeros grupos empresariais brasileiros.
               </Text>
             </Container>
             <Container maxWidth="1024px" marginTop="4rem">
