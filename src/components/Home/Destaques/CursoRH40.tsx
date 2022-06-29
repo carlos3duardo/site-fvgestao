@@ -12,17 +12,10 @@ export default function CursoRH40(): JSX.Element {
       padding="0"
       maxWidth="100%"
     >
-      <chakra.a
-        href="https://forms.gle/be1mgtunfyAgmJjS6"
-        target="_blank"
-        display="block"
-        width="100%"
-      >
-        <chakra.img
-          src="/img/home-destaques/curso-rh-4.0-1440x570.jpg"
-          width={{ base: '100%' }}
-        />
-      </chakra.a>
+      <chakra.img
+        src="/img/home-destaques/curso-rh-4.0-1440x570.jpg"
+        width={{ base: '100%' }}
+      />
     </Container>
   );
 }
