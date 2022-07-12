@@ -12,10 +12,17 @@ export default function CursoRH40(): JSX.Element {
       padding="0"
       maxWidth="100%"
     >
-      <chakra.img
-        src="/img/home-destaques/curso-rh-4.0-1440x570.jpg"
-        width={{ base: '100%' }}
-      />
+      <chakra.a
+        href="http://mkt.fvgestao.com.br/formacao-rh-estrategico-40"
+        target="_blank"
+        display="block"
+        width="100%"
+      >
+        <chakra.img
+          src="/img/home-destaques/curso-rh-4.0-1440x570.jpg"
+          width={{ base: '100%' }}
+        />
+      </chakra.a>
     </Container>
   );
 }
