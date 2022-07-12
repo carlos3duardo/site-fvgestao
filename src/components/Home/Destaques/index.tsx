@@ -39,7 +39,7 @@ export default function Destaques(): JSX.Element {
   const [destaques, setDestaques] = useState([]);
 
   useEffect(() => {
-    setDestaques([CursoRH40, BannerCulturaVencedoraV2]);
+    setDestaques([BannerCulturaVencedoraV2, CursoRH40]);
   }, []);
 
   return (
