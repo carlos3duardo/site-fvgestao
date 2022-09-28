@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import { chakra } from '@chakra-ui/react';
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
@@ -7,7 +6,6 @@ import { Navigation, Pagination } from 'swiper';
 import styles from './styles.module.scss';
 
 import BannerCulturaVencedoraV2 from './BannerCulturaVencedoraV2';
-import CursoRH40 from './CursoRH40';
 
 function SlidePrevButton() {
   const swiper = useSwiper();
@@ -36,11 +34,7 @@ function SlideNextButton() {
 }
 
 export default function Destaques(): JSX.Element {
-  const [destaques, setDestaques] = useState([]);
-
-  useEffect(() => {
-    setDestaques([BannerCulturaVencedoraV2, CursoRH40]);
-  }, []);
+  const destaques = [BannerCulturaVencedoraV2];
 
   return (
     <chakra.div
@@ -76,7 +70,7 @@ export default function Destaques(): JSX.Element {
           prevEl: `${styles.swiperButtonPrev}`,
           nextEl: `${styles.swiperButtonNext}`,
         }}
-        modules={[Pagination, Navigation]}
+        modules={destaques.length > 1 ? [Pagination, Navigation] : []}
         pagination={{
           clickable: true,
           bulletClass: `${styles.swiperPaginationBullet}`,
@@ -85,8 +79,15 @@ export default function Destaques(): JSX.Element {
         loop={destaques.length > 1}
         autoplay={{ delay: 5000 }}
       >
-        <SlidePrevButton />
-        <SlideNextButton />
+        {destaques.length > 1 ? (
+          <>
+            <SlidePrevButton />
+            <SlideNextButton />
+          </>
+        ) : (
+          ''
+        )}
+
         {destaques.map((banner, index) => (
           <SwiperSlide key={index} className={styles.swiperSlide}>
             {banner}
