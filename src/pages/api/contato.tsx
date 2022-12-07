@@ -8,22 +8,6 @@ import { fauna } from '../../services/faunadb';
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
-    // await fauna.query(
-    //   q.Create(q.Collection('mensagens'), {
-    //     data: {
-    //       pagina: req.body.pagina,
-    //       nome: req.body.nome.toUpperCase(),
-    //       empresa: req.body.empresa.toUpperCase(),
-    //       email: req.body.email.toLowerCase(),
-    //       municipio: req.body.municipio.toUpperCase(),
-    //       uf: req.body.uf.toUpperCase(),
-    //       celular: req.body.celular,
-    //       createdAt: format(new Date(), 'yyyy-MM-dd HH:mm:ss', {
-    //         locale: ptBR,
-    //       }),
-    //     },
-    //   }),
-    // );
 
     const mailjet = connect(
       process.env.MJ_APIKEY_PUBLIC,
