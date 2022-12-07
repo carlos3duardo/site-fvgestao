@@ -23,7 +23,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
           },
           To: [
             {
-              Email: process.env.MAIL_TO || 'contato@fvgestao.com.br',
+              Email: process.env.MAIL_TO || 'site@fvgestao.com.br',
               Name: 'Contato FV Gestão',
             },
           ],
