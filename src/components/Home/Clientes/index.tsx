@@ -182,7 +182,6 @@ export default function Clientes(): JSX.Element {
                   src="/img/clientes/cliente-energisa-ro.png"
                   alt="Energisa Rondônia"
                   layout="fill"
-                  objectFit="scale-down"
                 />
               </chakra.figure>
             </SwiperSlide>
