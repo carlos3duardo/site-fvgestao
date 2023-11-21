@@ -5,7 +5,8 @@ import { Navigation, Pagination } from 'swiper';
 
 import styles from './styles.module.scss';
 
-import BannerCulturaVencedoraV2 from './BannerCulturaVencedoraV2';
+// import BannerCulturaVencedoraV2 from './BannerCulturaVencedoraV2';
+import BussolaTerceirizacao from './BussolaTerceirizacao';
 
 function SlidePrevButton() {
   const swiper = useSwiper();
@@ -34,7 +35,7 @@ function SlideNextButton() {
 }
 
 export default function Destaques(): JSX.Element {
-  const destaques = [BannerCulturaVencedoraV2];
+  const destaques = [BussolaTerceirizacao];
 
   return (
     <chakra.div
