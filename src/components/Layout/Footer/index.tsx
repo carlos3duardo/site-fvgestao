@@ -139,6 +139,7 @@ export default function Footer(): JSX.Element {
                 src="/img/fvgestao-logo-footer.svg"
                 width={105}
                 height={32}
+                alt="FV Gestão"
               />
             </chakra.figure>
           </Flex>

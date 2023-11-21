@@ -409,6 +409,7 @@ export default function Header(): JSX.Element {
               src="/img/fvgestao-logo-header.svg"
               width={158}
               height={48}
+              alt="FV Gestão"
             />
           </chakra.a>
         </Link>

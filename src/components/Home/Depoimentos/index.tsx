@@ -62,7 +62,7 @@ function Depoimento({ nome, imagem, cargo, texto }: DepoimentoProps) {
           marginLeft={{ base: '-70px', md: '0' }}
           backgroundColor="orange.500"
         >
-          <Image src={imagem} width={144} height={144} />
+          <Image src={imagem} width={144} height={144} alt="" />
         </chakra.figure>
         <Heading as="h3" fontSize="1.75rem" color="orange.500">
           {nome}
@@ -184,7 +184,6 @@ export default function Depoimentos(): JSX.Element {
                 <Depoimento
                   nome="Felipe Aquino"
                   cargo="Gestor de Processos"
-                  nota={8}
                   texto="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu odio ut sem nulla pharetra diam sit amet nisl."
                   imagem="/img/depoimento-avatar-felipe-aquino.jpg"
                 />
@@ -194,7 +193,6 @@ export default function Depoimentos(): JSX.Element {
                 <Depoimento
                   nome="Jessica Costa"
                   cargo="Gerente de RH"
-                  nota={10}
                   texto="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu odio ut sem nulla pharetra diam sit amet nisl."
                   imagem="/img/depoimento-avatar-jessica-costa.jpg"
                 />
@@ -204,7 +202,6 @@ export default function Depoimentos(): JSX.Element {
                 <Depoimento
                   nome="Gustavo Guedes"
                   cargo="Gerente de Qualidade"
-                  nota={9}
                   texto="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu odio ut sem nulla pharetra diam sit amet nisl."
                   imagem="/img/depoimento-avatar-gustavo-guedes.jpg"
                 />
@@ -214,7 +211,6 @@ export default function Depoimentos(): JSX.Element {
                 <Depoimento
                   nome="Monica Silva"
                   cargo="Gerente de RH"
-                  nota={8}
                   texto="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu odio ut sem nulla pharetra diam sit amet nisl."
                   imagem="/img/depoimento-avatar-monica-silva.jpg"
                 />
@@ -224,7 +220,6 @@ export default function Depoimentos(): JSX.Element {
                 <Depoimento
                   nome="Will Leite"
                   cargo="Diretor Executivo"
-                  nota={10}
                   texto="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu odio ut sem nulla pharetra diam sit amet nisl."
                   imagem="/img/depoimento-avatar-will-leite.jpg"
                 />
@@ -234,7 +229,6 @@ export default function Depoimentos(): JSX.Element {
                 <Depoimento
                   nome="Patricia Prata"
                   cargo="Diretor Executivo"
-                  nota={10}
                   texto="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu odio ut sem nulla pharetra diam sit amet nisl."
                   imagem="/img/depoimento-avatar-patricia-prata.jpg"
                 />
