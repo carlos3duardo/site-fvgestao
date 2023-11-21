@@ -6,7 +6,6 @@ import {
   Container,
   Contato,
 } from '../../components/Layout';
-import { Depoimentos } from '../../components/Home';
 import {
   Descricao,
   DuvidasFrequentes,

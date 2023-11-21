@@ -1,11 +1,14 @@
 import Image from 'next/image';
 import { Box, chakra, Heading } from '@chakra-ui/react';
+// eslint-disable-next-line import/no-unresolved
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
 
 import { Container } from '../../Layout';
 
+// eslint-disable-next-line import/no-unresolved
 import 'swiper/css';
+// eslint-disable-next-line import/no-unresolved
 import 'swiper/css/pagination';
 
 import styles from './styles.module.scss';

@@ -1,14 +1,9 @@
 /* eslint-disable import/no-duplicates */
-import { query as q } from 'faunadb';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { connect } from 'node-mailjet';
-import { format } from 'date-fns';
-import { ptBR } from 'date-fns/locale';
-import { fauna } from '../../services/faunadb';
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
-
     const mailjet = connect(
       process.env.MJ_APIKEY_PUBLIC,
       process.env.MJ_APIKEY_PRIVATE,

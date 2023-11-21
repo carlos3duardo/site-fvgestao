@@ -1,13 +1,5 @@
 import Image from 'next/image';
-import {
-  Box,
-  Flex,
-  Grid,
-  chakra,
-  Heading,
-  Text,
-  VStack,
-} from '@chakra-ui/react';
+import { Box, Flex, chakra, Heading, Text, VStack } from '@chakra-ui/react';
 import { Head, Header, Container } from '../components/Layout';
 import Contato from '../components/Layout/Contato';
 import Footer from '../components/Layout/Footer';

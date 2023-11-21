@@ -14,6 +14,7 @@ import {
   FaStar,
   FaStarHalfAlt,
 } from 'react-icons/fa';
+// eslint-disable-next-line import/no-unresolved
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination } from 'swiper';
 import { Container } from '../../Layout';
@@ -29,11 +30,10 @@ interface DepoimentoProps {
   nome: string;
   imagem: string;
   cargo: string;
-  nota: number;
   texto: string;
 }
 
-function Depoimento({ nome, imagem, cargo, nota, texto }: DepoimentoProps) {
+function Depoimento({ nome, imagem, cargo, texto }: DepoimentoProps) {
   return (
     <chakra.div paddingLeft={{ base: '0', md: '70px' }}>
       <Box

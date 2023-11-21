@@ -1,7 +1,7 @@
-import { Box, Flex, Heading, chakra } from '@chakra-ui/react';
+// eslint-disable-next-line import/no-unresolved
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination } from 'swiper';
-import { Container } from '../../Layout';
+import { chakra } from '@chakra-ui/react';
 
 SwiperCore.use([Pagination]);
 

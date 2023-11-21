@@ -1,4 +1,5 @@
 import { chakra } from '@chakra-ui/react';
+// eslint-disable-next-line import/no-unresolved
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 import { Navigation, Pagination } from 'swiper';
@@ -35,7 +36,12 @@ function SlideNextButton() {
 }
 
 export default function Destaques(): JSX.Element {
-  const destaques = [BussolaTerceirizacao];
+  const destaques = [
+    {
+      id: 1,
+      element: BussolaTerceirizacao,
+    },
+  ];
 
   return (
     <chakra.div
@@ -89,9 +95,9 @@ export default function Destaques(): JSX.Element {
           ''
         )}
 
-        {destaques.map((banner, index) => (
-          <SwiperSlide key={index} className={styles.swiperSlide}>
-            {banner}
+        {destaques.map(banner => (
+          <SwiperSlide key={banner.id} className={styles.swiperSlide}>
+            {banner.element}
           </SwiperSlide>
         ))}
       </Swiper>

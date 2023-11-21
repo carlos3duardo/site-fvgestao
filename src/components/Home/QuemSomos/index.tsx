@@ -1,14 +1,5 @@
 import Link from 'next/link';
-import {
-  Box,
-  Flex,
-  chakra,
-  Icon,
-  Heading,
-  Text,
-  Button,
-} from '@chakra-ui/react';
-import { MdPlayCircleOutline } from 'react-icons/md';
+import { Box, Flex, chakra, Heading, Text, Button } from '@chakra-ui/react';
 
 import { Container } from '../../Layout';
 
