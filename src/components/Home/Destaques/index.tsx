@@ -6,8 +6,7 @@ import { Navigation, Pagination } from 'swiper';
 
 import styles from './styles.module.scss';
 
-// import BannerCulturaVencedoraV2 from './BannerCulturaVencedoraV2';
-import BussolaTerceirizacao from './BussolaTerceirizacao';
+import BannerCulturaVencedoraV2 from './BannerCulturaVencedoraV2';
 
 function SlidePrevButton() {
   const swiper = useSwiper();
@@ -39,7 +38,7 @@ export default function Destaques(): JSX.Element {
   const destaques = [
     {
       id: 1,
-      element: BussolaTerceirizacao,
+      element: BannerCulturaVencedoraV2,
     },
   ];
 
