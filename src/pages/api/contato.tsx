@@ -1,4 +1,5 @@
 /* eslint-disable import/no-duplicates */
+import axios from 'axios';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { connect } from 'node-mailjet';
 
