@@ -7,7 +7,10 @@ import {
   VStack,
   Grid,
   GridItem,
+  useToast,
 } from '@chakra-ui/react';
+import { useRef, useState } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { Container } from '..';
 import { api } from '../../../services/api';
@@ -28,10 +31,40 @@ interface FormProps {
 }
 
 export default function Contato({ pagina }: ContatoProps): JSX.Element {
-  const { register, handleSubmit, formState } = useForm();
+  const { register, handleSubmit, formState, reset } = useForm();
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const toast = useToast();
 
   const onSubmit: SubmitHandler<FormProps> = async data => {
-    api.post('/contato', data);
+    if (!recaptchaToken) {
+      toast({
+        status: 'warning',
+        title: 'Confirme que você não é um robô.',
+        isClosable: true,
+      });
+      return;
+    }
+
+    try {
+      await api.post('/contato', { ...data, recaptchaToken });
+      reset({ pagina });
+      toast({
+        status: 'success',
+        title: 'Mensagem enviada com sucesso!',
+        isClosable: true,
+      });
+    } catch {
+      toast({
+        status: 'error',
+        title: 'Não foi possível enviar sua mensagem. Tente novamente.',
+        isClosable: true,
+      });
+    } finally {
+      // Cada token só pode ser validado uma vez pelo Google.
+      recaptchaRef.current?.reset();
+      setRecaptchaToken(null);
+    }
   };
 
   return (
@@ -157,6 +190,15 @@ export default function Contato({ pagina }: ContatoProps): JSX.Element {
                     isRequired
                     mask="(99) 99999-9999"
                     {...register('celular')}
+                  />
+                </GridItem>
+                <GridItem gridColumnEnd="span 12">
+                  <ReCAPTCHA
+                    ref={recaptchaRef}
+                    sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
+                    hl="pt-BR"
+                    onChange={setRecaptchaToken}
+                    onExpired={() => setRecaptchaToken(null)}
                   />
                 </GridItem>
                 <GridItem gridColumnEnd={{ base: 'span 12', md: 'span 5' }}>
