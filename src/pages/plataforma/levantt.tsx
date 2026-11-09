@@ -6,7 +6,6 @@ import {
   Container,
   Contato,
 } from '../../components/Layout';
-import { Depoimentos } from '../../components/Home';
 import {
   Descricao,
   DuvidasFrequentes,
@@ -54,7 +53,7 @@ export default function Levantt(): JSX.Element {
               algoritmos que compõe o sistema executam a leitura e fazem a
               comparação desses elementos, resultando daí os parâmetros que vão
               embasar o novo relacionamento entre a empresa e seu público-alvo,
-              transformando a cultura e inovando a gestão. 
+              transformando a cultura e inovando a gestão.
             </Text>
           </Container>
         </Box>

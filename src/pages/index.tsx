@@ -2,12 +2,10 @@ import { Box, chakra, Flex } from '@chakra-ui/react';
 import Head from 'next/head';
 import {
   Clientes,
-  Depoimentos,
   DesenvolvimentoEmpresarial,
   Destaques,
   Plataformas,
   QuemSomos,
-  SejaFranqueado,
 } from '../components/Home';
 import { Header } from '../components/Layout';
 import Contato from '../components/Layout/Contato';

@@ -54,13 +54,7 @@ function Plataforma({
             w="300px"
             textAlign={{ base: 'center', md: reverse ? 'left' : 'right' }}
           >
-            <Image
-              src={iconeUrl}
-              alt={nome}
-              width={240}
-              height={160}
-              layout="fixed"
-            />
+            <Image src={iconeUrl} alt={nome} width={240} height={160} />
           </chakra.figure>
           <Box textAlign={{ base: 'center', md: reverse ? 'left' : 'right' }}>
             <Text fontSize="1.25rem" flex="1" marginBottom="0.5rem">

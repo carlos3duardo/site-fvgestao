@@ -1,11 +1,6 @@
 /* eslint-disable import/no-duplicates */
-import axios from 'axios';
-import { query as q } from 'faunadb';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { connect } from 'node-mailjet';
-import { format } from 'date-fns';
-import { ptBR } from 'date-fns/locale';
-import { fauna } from '../../services/faunadb';
 
 async function recaptchaValido(
   token: unknown,
@@ -50,23 +45,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   }
 
   try {
-    // await fauna.query(
-    //   q.Create(q.Collection('mensagens'), {
-    //     data: {
-    //       pagina: req.body.pagina,
-    //       nome: req.body.nome.toUpperCase(),
-    //       empresa: req.body.empresa.toUpperCase(),
-    //       email: req.body.email.toLowerCase(),
-    //       municipio: req.body.municipio.toUpperCase(),
-    //       uf: req.body.uf.toUpperCase(),
-    //       celular: req.body.celular,
-    //       createdAt: format(new Date(), 'yyyy-MM-dd HH:mm:ss', {
-    //         locale: ptBR,
-    //       }),
-    //     },
-    //   }),
-    // );
-
     const mailjet = connect(
       process.env.MJ_APIKEY_PUBLIC,
       process.env.MJ_APIKEY_PRIVATE,
@@ -81,7 +59,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
           },
           To: [
             {
-              Email: process.env.MAIL_TO || 'contato@fvgestao.com.br',
+              Email: process.env.MAIL_TO || 'site@fvgestao.com.br',
               Name: 'Contato FV Gestão',
             },
           ],
